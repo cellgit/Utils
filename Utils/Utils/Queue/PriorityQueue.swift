@@ -14,27 +14,18 @@ struct QueueObject {
 }
 
 class PriorityQueue {
-    
-//    var left: [AnyObject]
-//    var right: [AnyObject]
     var left: [QueueObject]
     var right: [QueueObject]
     var isEmpty: Bool { return left.isEmpty && right.isEmpty }
     var size: Int { return left.count + right.count }
     var peek: QueueObject? { return left.isEmpty ? right.first : left.last }
     
-    
-    
     init() {
         left = [QueueObject]()
         right = [QueueObject]()
     }
     
-    func enqueue2(object: QueueObject) {
-        right.append(object)
-    }
-    
-    func enqueue(object: QueueObject) ->[QueueObject] {
+    public func enqueue(object: QueueObject) ->[QueueObject] {
         right.append(object)
         /// 进行排序
         right.sort { (s1, s2) -> Bool in
@@ -43,7 +34,7 @@ class PriorityQueue {
         return right
     }
 
-    func dequeue() -> QueueObject? {
+    public func dequeue() -> QueueObject? {
         if left.isEmpty {
             left = right.reversed()
             right.removeAll()

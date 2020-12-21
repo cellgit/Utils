@@ -50,8 +50,8 @@ class ViewController: UIViewController {
         return btn
     }()
     
-    lazy var popQueue: ViewQueue = {
-        let queue = ViewQueue.init()
+    lazy var popQueue: PriorityQueue = {
+        let queue = PriorityQueue.init()
         return queue
     }()
 

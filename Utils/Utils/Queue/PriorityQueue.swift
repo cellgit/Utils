@@ -13,7 +13,7 @@ struct QueueObject {
     var object: AnyObject?
 }
 
-class ViewQueue {
+class PriorityQueue {
     
 //    var left: [AnyObject]
 //    var right: [AnyObject]

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4FE3A75A9812BBF3D4C07A77 /* Pods_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2326E16D412D44349106B0C4 /* Pods_Utils.framework */; };
 		CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF979D259032C6007D6691 /* PriorityQueue.swift */; };
+		F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B16CC25AB6A620045D926 /* CustomSlider.swift */; };
 		F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F31200258DC1FB00CBA614 /* AppDelegate.swift */; };
 		F2F31203258DC1FB00CBA614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F31202258DC1FB00CBA614 /* SceneDelegate.swift */; };
 		F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F31204258DC1FB00CBA614 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		2326E16D412D44349106B0C4 /* Pods_Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAF979D259032C6007D6691 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		D6EE8A61890453FB4EB890A2 /* Pods-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.debug.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.debug.xcconfig"; sourceTree = "<group>"; };
+		F22B16CC25AB6A620045D926 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		F2F311FD258DC1FB00CBA614 /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2F31200258DC1FB00CBA614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2F31202258DC1FB00CBA614 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				F2F31200258DC1FB00CBA614 /* AppDelegate.swift */,
 				F2F31202258DC1FB00CBA614 /* SceneDelegate.swift */,
 				F2F31204258DC1FB00CBA614 /* ViewController.swift */,
+				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
 				F2F31239258DC25500CBA614 /* UtilsForUI */,
 				CEAF979C2590328C007D6691 /* Queue */,
 				F2F31206258DC1FB00CBA614 /* Main.storyboard */,
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */,
+				F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,
 				F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */,
 				F2F31203258DC1FB00CBA614 /* SceneDelegate.swift in Sources */,

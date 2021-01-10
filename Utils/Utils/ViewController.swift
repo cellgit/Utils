@@ -58,12 +58,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .white
         
 //        initialLinedLabel()
         
 //        data()
-        layout()
+//        layout()
+        
+        initialSlider()
     }
     
     
@@ -141,6 +143,26 @@ extension ViewController {
         linedLabel.font = UIFont.systemFont(ofSize: 10)
         linedLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+        }
+        
+    }
+}
+
+
+extension ViewController {
+    func initialSlider() {
+        
+        let slider = CustomSlider.init()
+        self.view.addSubview(slider)
+        slider.setThumbImage(UIImage.init(named: "audio_slider_dot"), for: .normal)
+        slider.backgroundColor = UIColor.orange
+        slider.minimumTrackTintColor = .magenta
+//        slider.transform =  CGAffineTransform.init(scaleX: 1.5, y: 1.5)
+        slider.snp.makeConstraints {
+            $0.left.equalTo(self.view.snp.left).offset(100)
+            $0.right.equalTo(self.view.snp.right).offset(-100)
+            $0.centerY.equalToSuperview()
+            $0.height.equalTo(20)
         }
         
     }

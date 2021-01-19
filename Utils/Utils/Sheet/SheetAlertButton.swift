@@ -29,32 +29,27 @@ struct SheetHeightModel {
 class SheetAlertButton: UIButton {
     /// 列表最多显示几行
     private let kMaxCell: Int = 4
-    
     struct Layout {
         static let safeViewHeight: CGFloat = isFullScreen ? 34 : 0
     }
-    
     /// 底部按钮的标题
     open var bottomButtonTitle: String? = "取消" {
         didSet {
             layoutIfNeeded()
         }
     }
-    
     /// 底部按钮的标题颜色
     open var bottomButtonTitleColor: UIColor? = UIColor.init(red: 51/255, green: 51/255, blue: 51/255, alpha: 1) {
         didSet {
             layoutIfNeeded()
         }
     }
-    
     /// 底部按钮的标题字号
     open var bottomButtonTitleFont: UIFont? = UIFont.systemFont(ofSize: 14) {
         didSet {
             layoutIfNeeded()
         }
     }
-    
     /// 底部按钮左边间距
     open var bottomButtonLeftMargin: CGFloat = 0 {
         didSet {
@@ -67,14 +62,6 @@ class SheetAlertButton: UIButton {
             layoutIfNeeded()
         }
     }
-    
-    /// 内容视图的圆角大小
-    open var contentViewCornerRadius: CGFloat = 4 {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    
     /// 底部按钮容器和safeView颜色
     var bottomBackgroundColor: UIColor = .white {
         didSet {
@@ -93,15 +80,12 @@ class SheetAlertButton: UIButton {
             layoutIfNeeded()
         }
     }
-    
-    
     /// 内容视图的背景色
     var contentViewBackgroundColor: UIColor = UIColor.init(red: 242/255, green: 242/255, blue: 242/255, alpha: 1) {
         didSet {
             layoutIfNeeded()
         }
     }
-    
     /// 动画时间(弹框弹出世间)
     private var duration: TimeInterval = TimeInterval(200 / kVelocity)
     /// 底部按钮
@@ -114,7 +98,6 @@ class SheetAlertButton: UIButton {
         let v = UIView.init()
         return v
     }()
-    
     private lazy var safeView: UIView = {
         let view = UIView.init()
         view.backgroundColor = .white
@@ -123,10 +106,9 @@ class SheetAlertButton: UIButton {
     /// 顶部圆角部分的view: 高度为圆角大小
     private lazy var topView: UIView = {
         let view = UIView.init()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         return view
     }()
-    
     
     /// 承载底部按钮和列表
     private lazy var contentView: UIView = {
@@ -148,7 +130,7 @@ class SheetAlertButton: UIButton {
     private let datalist: [SheetCellModel]
     /// 底部视图高度数据(为了初始化确定高度)
     private let heightModel: SheetHeightModel
-
+    
     init(mode: SheetStyle, data: [SheetCellModel], heightModel: SheetHeightModel = SheetHeightModel.init(padding: 0, margin: 0, button: 44, cornerRadius: 8)) {
         self.datalist = data
         self.heightModel = heightModel
@@ -200,7 +182,6 @@ class SheetAlertButton: UIButton {
         contentView.addSubview(topView)
         contentView.addSubview(bottomButtonContainer)
         bottomButtonContainer.addSubview(bottomButton)
-        
         contentView.addSubview(tableView)
         let tableViewHeight: CGFloat = getTableViewHeight(data: self.datalist, heightModel: self.heightModel)
         
@@ -218,9 +199,7 @@ class SheetAlertButton: UIButton {
         layout()
     }
     
-    
     override func layoutIfNeeded() {
-        
         /// 属性设置需要在这里进行更新
         bottomButton.setTitle(bottomButtonTitle, for: .normal)
         bottomButton.setTitleColor(self.bottomButtonTitleColor, for: .normal)
@@ -235,7 +214,6 @@ class SheetAlertButton: UIButton {
         layout()
     }
     
-    
     func layout() {
         if isFullScreen {
             contentView.addSubview(safeView)
@@ -244,24 +222,19 @@ class SheetAlertButton: UIButton {
                 $0.height.equalTo(Layout.safeViewHeight)
             }
         }
-        
         bottomButtonContainer.snp.remakeConstraints {
             $0.left.right.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-Layout.safeViewHeight)
             $0.height.equalTo(heightModel.button + 2*heightModel.margin)
         }
-        
         bottomButton.snp.remakeConstraints {
             $0.left.equalToSuperview().offset(bottomButtonLeftMargin)
             $0.centerY.equalToSuperview()
             $0.right.equalToSuperview().offset(-bottomButtonRightMargin)
             $0.height.equalTo(heightModel.button)
         }
-        
         rectCorner()
-        
     }
-    
     
 }
 
@@ -293,7 +266,6 @@ extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-
 /// 底部button事件
 extension SheetAlertButton {
     func action() {
@@ -304,14 +276,11 @@ extension SheetAlertButton {
     }
 }
 
-
-
 /// 动画
 extension SheetAlertButton {
     
     func fadeInTransform() {
         let y: CGFloat = -(self.contentView.bounds.size.height)
-//        debugPrint("y===== \(-200)")
         UIView.animate(withDuration: self.duration, delay: 0.0, options: .curveEaseIn, animations: {
             self.backgroundColor = UIColor.init(white: 0, alpha: 0.6)
             self.contentView.transform = CGAffineTransform(translationX: 0, y: y)
@@ -331,7 +300,7 @@ extension SheetAlertButton {
     // 设置contentView圆角路径
     func rectCorner() {
         /// 注意: 这里切圆角需要被切得视图用frame布局
-        contentView.layer.mask = cornerLayer(contentView, corner: [.topLeft, .topRight], radii: CGSize(width: contentViewCornerRadius, height: contentViewCornerRadius))
+        contentView.layer.mask = cornerLayer(contentView, corner: [.topLeft, .topRight], radii: CGSize(width: heightModel.cornerRadius, height: heightModel.cornerRadius))
     }
     
     private func cornerLayer(_ view: UIView, corner: UIRectCorner, radii: CGSize) -> CALayer {
@@ -344,8 +313,6 @@ extension SheetAlertButton {
 }
 
 
-
-
 class SheetCell: UITableViewCell {
     
     open var model: SheetCellModel? {
@@ -353,8 +320,6 @@ class SheetCell: UITableViewCell {
             configure(model: model)
         }
     }
-    
-    
     lazy var titleLabel: UILabel = {
         let l = UILabel.init()
         l.textAlignment = .center
@@ -363,7 +328,7 @@ class SheetCell: UITableViewCell {
     
     private var line: UIView = {
         let v = UIView.init()
-        v.backgroundColor = .gray
+        v.backgroundColor = UIColor.init(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
         return v
     }()
     
@@ -373,7 +338,6 @@ class SheetCell: UITableViewCell {
         initial()
     }
     
-    
     func configure(model: SheetCellModel?) {
         titleLabel.text = model?.title
         titleLabel.textColor = model?.titleColor
@@ -382,7 +346,6 @@ class SheetCell: UITableViewCell {
             line.isHidden = !isSeparator
         }
     }
-    
     
     func initial() {
         contentView.addSubview(titleLabel)
@@ -401,12 +364,10 @@ class SheetCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

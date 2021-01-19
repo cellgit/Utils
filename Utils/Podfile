@@ -6,4 +6,7 @@ use_frameworks!
 
 pod 'SnapKit'
 
+pod 'SwiftEntryKit' # 自定义弹框
+pod 'XLActionController' #底部sheet
+
 end

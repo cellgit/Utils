@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .white
-        let nav = UINavigationController.init(rootViewController: ViewController())
+        let nav = UINavigationController.init(rootViewController: ListTableViewController())
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }

@@ -22,11 +22,13 @@ struct SheetHeightModel {
     var margin: CGFloat = 0
     /// 按钮的高度
     var button: CGFloat = 44
+    /// contentView顶部圆角
+    var cornerRadius: CGFloat = 8
 }
 
 class SheetAlertButton: UIButton {
-    
-    
+    /// 列表最多显示几行
+    private let kMaxCell: Int = 4
     
     struct Layout {
         static let safeViewHeight: CGFloat = isFullScreen ? 34 : 0
@@ -118,6 +120,14 @@ class SheetAlertButton: UIButton {
         view.backgroundColor = .white
         return view
     }()
+    /// 顶部圆角部分的view: 高度为圆角大小
+    private lazy var topView: UIView = {
+        let view = UIView.init()
+        view.backgroundColor = .red
+        return view
+    }()
+    
+    
     /// 承载底部按钮和列表
     private lazy var contentView: UIView = {
         let view = UIView.init()
@@ -129,6 +139,8 @@ class SheetAlertButton: UIButton {
         let table = UITableView.init(frame: .zero, style: .plain)
         table.separatorStyle = .none
         table.register(SheetCell.self)
+        table.dataSource = self
+        table.delegate = self
         return table
     }()
     
@@ -137,7 +149,7 @@ class SheetAlertButton: UIButton {
     /// 底部视图高度数据(为了初始化确定高度)
     private let heightModel: SheetHeightModel
 
-    init(mode: SheetStyle, data: [SheetCellModel], heightModel: SheetHeightModel = SheetHeightModel.init(padding: 0, margin: 0, button: 44)) {
+    init(mode: SheetStyle, data: [SheetCellModel], heightModel: SheetHeightModel = SheetHeightModel.init(padding: 0, margin: 0, button: 44, cornerRadius: 8)) {
         self.datalist = data
         self.heightModel = heightModel
         super.init(frame: .zero)
@@ -147,24 +159,28 @@ class SheetAlertButton: UIButton {
         action()
     }
     
-    
+    /// tableView的高度
     private func getTableViewHeight(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGFloat {
         var contentHeight: CGFloat = 0
-        for item in data {
-            contentHeight += item.height ?? 0
+        data.enumerated().forEach { [weak self] (index, item) in
+            guard let `self`  = self else { return }
+            if index < kMaxCell {
+                contentHeight += item.height ?? 0
+            }
         }
         return contentHeight
     }
-    
+    /// contentView的高度(总高度)
     private func getContentViewtHeight(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGFloat {
         var contentHeight: CGFloat = 0
         for item in data {
             contentHeight += item.height ?? 0
         }
-        contentHeight = contentHeight + heightModel.button + 2*heightModel.margin + heightModel.padding + Layout.safeViewHeight
+        let tableViewHeight = getTableViewHeight(data: data, heightModel: heightModel)
+        contentHeight = tableViewHeight + heightModel.button + 2*heightModel.margin + heightModel.padding + Layout.safeViewHeight + heightModel.cornerRadius
         return contentHeight
     }
-    
+    /// contentView的frame
     private func getContentViewFrame(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGRect {
         let contentHeight: CGFloat = getContentViewtHeight(data: data, heightModel: heightModel)
         return CGRect(x: 0, y: SCREEN_HEIGHT, width: SCREEN_WIDTH, height: contentHeight)
@@ -175,19 +191,27 @@ class SheetAlertButton: UIButton {
     }
     
     func setupUI() {
+        /// 列表行数大于 kMaxCell 可以滑动
+        tableView.isScrollEnabled = (datalist.count > kMaxCell)
         /// 设置一个初始的alpha值
         self.backgroundColor = UIColor.init(white: 1, alpha: 0.0)
         UIApplication.shared.windows.last?.addSubview(self)
         self.addSubview(contentView)
-        
+        contentView.addSubview(topView)
         contentView.addSubview(bottomButtonContainer)
         bottomButtonContainer.addSubview(bottomButton)
         
         contentView.addSubview(tableView)
         let tableViewHeight: CGFloat = getTableViewHeight(data: self.datalist, heightModel: self.heightModel)
-
-        tableView.snp.makeConstraints {
+        
+        topView.snp.makeConstraints {
             $0.left.top.right.equalToSuperview()
+            $0.height.equalTo(heightModel.cornerRadius)
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.top.equalToSuperview().offset(heightModel.cornerRadius)
             $0.height.equalTo(tableViewHeight)
         }
         self.fillSuperview()
@@ -248,6 +272,7 @@ extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SheetCell.self, indexPath)
+//        cell.backgroundColor = .systemTeal
         if indexPath.row < datalist.count {
             cell.model = datalist[indexPath.row]
         }
@@ -260,6 +285,11 @@ extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
             height = datalist[indexPath.row].height ?? 0
         }
         return height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        debugPrint("indexPath.row===== \(indexPath.row)")
     }
 }
 
@@ -348,7 +378,9 @@ class SheetCell: UITableViewCell {
         titleLabel.text = model?.title
         titleLabel.textColor = model?.titleColor
         titleLabel.font = model?.font
-        line.isHidden = !(model?.isSeparator != nil)
+        if let isSeparator = model?.isSeparator {
+            line.isHidden = !isSeparator
+        }
     }
     
     

@@ -54,7 +54,7 @@ class SheetListTableViewController: UITableViewController {
             
             let data: [SheetCellModel] = [model1,model2,model3,model4]
             
-            let heightModel = SheetHeightModel.init(padding: 100, margin: 100, button: 50)
+            let heightModel = SheetHeightModel.init(padding: 10, margin: 10, button: 50)
             
             let alert = SheetAlertButton.init(mode: .cancel, data: data, heightModel: heightModel)
             alert.bottomButtonTitle = "取消"

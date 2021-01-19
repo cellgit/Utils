@@ -66,13 +66,6 @@ class SheetAlertButton: UIButton {
         }
     }
     
-//    /// 底部按钮和列表的间距
-//    open var padding: CGFloat = 0 {
-//        didSet {
-//            layoutIfNeeded()
-//        }
-//    }
-    
     /// 内容视图的圆角大小
     open var contentViewCornerRadius: CGFloat = 4 {
         didSet {
@@ -107,14 +100,14 @@ class SheetAlertButton: UIButton {
         }
     }
     
-    
-    private var duration: TimeInterval = 0.38
-    
+    /// 动画时间(弹框弹出世间)
+    private var duration: TimeInterval = TimeInterval(200 / kVelocity)
+    /// 底部按钮
     private lazy var bottomButton: UIButton = {
         let button = UIButton.init(type: .custom)
         return button
     }()
-    
+    /// 底部按钮容器
     private lazy var bottomButtonContainer: UIView = {
         let v = UIView.init()
         return v
@@ -132,37 +125,49 @@ class SheetAlertButton: UIButton {
         return view
     }()
     
-    private var contentHeight: CGFloat = 0
-    
-    
     private lazy var tableView: UITableView = {
         let table = UITableView.init(frame: .zero, style: .plain)
         table.separatorStyle = .none
-        
+        table.register(SheetCell.self)
         return table
     }()
     
+    /// 列表数据
+    private let datalist: [SheetCellModel]
+    /// 底部视图高度数据(为了初始化确定高度)
     private let heightModel: SheetHeightModel
 
     init(mode: SheetStyle, data: [SheetCellModel], heightModel: SheetHeightModel = SheetHeightModel.init(padding: 0, margin: 0, button: 44)) {
+        self.datalist = data
         self.heightModel = heightModel
         super.init(frame: .zero)
-        
+        contentView.frame = getContentViewFrame(data: data, heightModel: heightModel)
+        setupUI()
+        fadeInTransform()
+        action()
+    }
+    
+    
+    private func getTableViewHeight(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGFloat {
+        var contentHeight: CGFloat = 0
         for item in data {
             contentHeight += item.height ?? 0
         }
-        
+        return contentHeight
+    }
+    
+    private func getContentViewtHeight(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGFloat {
+        var contentHeight: CGFloat = 0
+        for item in data {
+            contentHeight += item.height ?? 0
+        }
         contentHeight = contentHeight + heightModel.button + 2*heightModel.margin + heightModel.padding + Layout.safeViewHeight
-        
-        contentView.frame = CGRect(x: 0, y: SCREEN_HEIGHT, width: SCREEN_WIDTH, height: contentHeight)
-        
-        self.duration = TimeInterval(200 / kVelocity)
-        
-        setupUI()
-        
-        fadeInTransform()
-
-        action()
+        return contentHeight
+    }
+    
+    private func getContentViewFrame(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGRect {
+        let contentHeight: CGFloat = getContentViewtHeight(data: data, heightModel: heightModel)
+        return CGRect(x: 0, y: SCREEN_HEIGHT, width: SCREEN_WIDTH, height: contentHeight)
     }
 
     required init?(coder: NSCoder) {
@@ -178,6 +183,13 @@ class SheetAlertButton: UIButton {
         contentView.addSubview(bottomButtonContainer)
         bottomButtonContainer.addSubview(bottomButton)
         
+        contentView.addSubview(tableView)
+        let tableViewHeight: CGFloat = getTableViewHeight(data: self.datalist, heightModel: self.heightModel)
+
+        tableView.snp.makeConstraints {
+            $0.left.top.right.equalToSuperview()
+            $0.height.equalTo(tableViewHeight)
+        }
         self.fillSuperview()
         layout()
     }
@@ -227,6 +239,28 @@ class SheetAlertButton: UIButton {
     }
     
     
+}
+
+extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datalist.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(SheetCell.self, indexPath)
+        if indexPath.row < datalist.count {
+            cell.model = datalist[indexPath.row]
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height: CGFloat = 0
+        if indexPath.row < datalist.count {
+            height = datalist[indexPath.row].height ?? 0
+        }
+        return height
+    }
 }
 
 

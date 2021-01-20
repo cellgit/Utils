@@ -23,8 +23,8 @@ struct SheetCellModel {
     var font: UIFont? = UIFont.systemFont(ofSize: 14)
     /// 标题颜色
     var titleColor: UIColor? = UIColor.init(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
-    /// 是否有分割线
-    var isSeparator: Bool? = true
+    /// 是否显示分割线
+    var isHiddenSeparator: Bool? = true
     /// 高度
     var height: CGFloat? = 44
 }

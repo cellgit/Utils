@@ -27,6 +27,11 @@ struct SheetHeightModel {
 }
 
 class SheetAlertButton: UIButton {
+    /// 选中的选项回调: model选中想的数据
+    open var selectedModel: ((_ model: SheetCellModel) -> Void)?
+    /// 底部按钮选中回调: style样式
+    open var selectedBottomButton: ((_ style: SheetStyle) -> Void)?
+    
     /// 列表最多显示几行
     private let kMaxCell: Int = 4
     struct Layout {
@@ -130,8 +135,11 @@ class SheetAlertButton: UIButton {
     private let datalist: [SheetCellModel]
     /// 底部视图高度数据(为了初始化确定高度)
     private let heightModel: SheetHeightModel
+    /// 样式
+    private let style: SheetStyle
     
-    init(mode: SheetStyle, data: [SheetCellModel], heightModel: SheetHeightModel = SheetHeightModel.init(padding: 0, margin: 0, button: 44, cornerRadius: 8)) {
+    init(style: SheetStyle, data: [SheetCellModel], heightModel: SheetHeightModel = SheetHeightModel.init(padding: 0, margin: 0, button: 44, cornerRadius: 8)) {
+        self.style = style
         self.datalist = data
         self.heightModel = heightModel
         super.init(frame: .zero)
@@ -172,7 +180,7 @@ class SheetAlertButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI() {
+    private func setupUI() {
         /// 列表行数大于 kMaxCell 可以滑动
         tableView.isScrollEnabled = (datalist.count > kMaxCell)
         /// 设置一个初始的alpha值
@@ -214,7 +222,7 @@ class SheetAlertButton: UIButton {
         layout()
     }
     
-    func layout() {
+    private func layout() {
         if isFullScreen {
             contentView.addSubview(safeView)
             safeView.snp.remakeConstraints {
@@ -263,17 +271,40 @@ extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         debugPrint("indexPath.row===== \(indexPath.row)")
+        if let model = index(for: indexPath) {
+            selectedModel?(model)
+        }
     }
+    private func index(for indexPath: IndexPath) -> SheetCellModel? {
+        guard indexPath.section < datalist.count else { return nil }
+        return datalist[indexPath.row]
+    }
+    
 }
 
 /// 底部button事件
 extension SheetAlertButton {
-    func action() {
-        action { [weak self] (sender) in
+    private func action() {
+        /// 透明背景视图的事件
+        self.action { [weak self] (sender) in
             guard let `self` = self else { return }
             self.fadeOutTransform()
         }
+        
+        /// 底部按钮的事件
+        switch self.style {
+        case .cancel:
+            self.bottomButton.action { [weak self] (sender) in
+                guard let `self` = self else { return }
+                self.fadeOutTransform()
+                self.selectedBottomButton?(self.style)
+            }
+        default:
+            break
+        }
+        
     }
+    
 }
 
 /// 动画
@@ -342,8 +373,8 @@ class SheetCell: UITableViewCell {
         titleLabel.text = model?.title
         titleLabel.textColor = model?.titleColor
         titleLabel.font = model?.font
-        if let isSeparator = model?.isSeparator {
-            line.isHidden = !isSeparator
+        if let isHiddenSeparator = model?.isHiddenSeparator {
+            line.isHidden = isHiddenSeparator
         }
     }
     

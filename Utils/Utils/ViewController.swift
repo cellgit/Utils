@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import PagingViewKit
 
 var poplist: [QueueObject] = []
 
@@ -66,8 +67,27 @@ class ViewController: UIViewController {
 //        layout()
         
         initialSlider()
+        
+        initialPageTitle()
     }
     
+    
+}
+
+
+extension ViewController: PagingTitleViewDelegate {
+    func initialPageTitle() {
+        let titles = ["全部", "一年级", "二年级", "三年级", "四年级", "五年级", "六年级", "七年级", "八年级", "九年级", "高一", "高二", "高三"]
+        let titleView = PCoverTitleView.init(titles: titles)
+        view.addSubview(titleView)
+        
+        titleView.snp.makeConstraints {
+            $0.left.equalTo(self.view).offset(20)
+            $0.right.equalTo(self.view).offset(-20)
+            $0.height.equalTo(44)
+            $0.top.equalToSuperview().offset(200)
+        }
+    }
     
 }
 

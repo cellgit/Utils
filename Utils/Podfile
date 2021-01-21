@@ -9,4 +9,6 @@ pod 'SnapKit'
 pod 'SwiftEntryKit' # 自定义弹框
 pod 'XLActionController' #底部sheet
 
+pod 'PagingViewKit', '~> 1.1.5'
+
 end

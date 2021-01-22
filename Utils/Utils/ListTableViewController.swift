@@ -54,6 +54,15 @@ class ListTableViewController: UITableViewController {
         case ExampleEnum.linedLabel.rawValue:
             let alertViewController = ViewController.init()
             self.navigationController?.pushViewController(alertViewController, animated: true)
+        case ExampleEnum.pickerView.rawValue:
+            let list = ["全部","三年级","四年级","五年级","六年级"]
+            let pickerView = PopPickerView.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width, height: 307 + (is_iPhoneX ? 34 : 0)), datalist: list,title: "年级选择", selectedRow: 2)
+            
+            pickerView.rowAndComponentCallBack = {(resultStr) in
+                print(resultStr as Any)
+                debugPrint("resultStr===== \(resultStr)")
+            }
+            pickerView.show()
         default:
             break
         }

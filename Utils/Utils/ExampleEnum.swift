@@ -12,6 +12,7 @@ enum ExampleEnum: Int,CaseIterable {
     case alert = 0
     case sheet = 1
     case linedLabel = 2
+    case pickerView = 3
 }
 
 

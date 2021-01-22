@@ -25,6 +25,7 @@
 		CE891A5025B57EE4003B286E /* SheetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A4F25B57EE4003B286E /* SheetStyle.swift */; };
 		CEA6F2B225B7FEA700C91997 /* PCoverTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6F2B125B7FEA700C91997 /* PCoverTitleView.swift */; };
 		CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF979D259032C6007D6691 /* PriorityQueue.swift */; };
+		CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAE90225B924CF0049C040 /* PopPickerView.swift */; };
 		F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B16CC25AB6A620045D926 /* CustomSlider.swift */; };
 		F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F31200258DC1FB00CBA614 /* AppDelegate.swift */; };
 		F2F31203258DC1FB00CBA614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F31202258DC1FB00CBA614 /* SceneDelegate.swift */; };
@@ -74,6 +75,7 @@
 		CE891A4F25B57EE4003B286E /* SheetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetStyle.swift; sourceTree = "<group>"; };
 		CEA6F2B125B7FEA700C91997 /* PCoverTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCoverTitleView.swift; sourceTree = "<group>"; };
 		CEAF979D259032C6007D6691 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		CEFAE90225B924CF0049C040 /* PopPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopPickerView.swift; sourceTree = "<group>"; };
 		D6EE8A61890453FB4EB890A2 /* Pods-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.debug.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		F22B16CC25AB6A620045D926 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		F2F311FD258DC1FB00CBA614 /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,14 @@
 			path = Queue;
 			sourceTree = "<group>";
 		};
+		CEFAE90125B914B30049C040 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CEFAE90225B924CF0049C040 /* PopPickerView.swift */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
 		F2F311F4258DC1FB00CBA614 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 				CE8919D425B532E9003B286E /* Alert */,
 				CE891A2525B56A36003B286E /* Sheet */,
 				CEA6F2A825B7FD0B00C91997 /* TitleView */,
+				CEFAE90125B914B30049C040 /* PickerView */,
 				F2F31206258DC1FB00CBA614 /* Main.storyboard */,
 				F2F31209258DC1FC00CBA614 /* Assets.xcassets */,
 				F2F3120B258DC1FC00CBA614 /* LaunchScreen.storyboard */,
@@ -435,6 +446,7 @@
 				CEA6F2B225B7FEA700C91997 /* PCoverTitleView.swift in Sources */,
 				CE891A2725B56A56003B286E /* SheetListTableViewController.swift in Sources */,
 				CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */,
+				CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */,
 				CE8919E225B535C9003B286E /* UIView+Identifier.swift in Sources */,
 				F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,

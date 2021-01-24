@@ -6,93 +6,21 @@
 //
 
 /**
- * 壳子: 底部有一个按钮
+ * Sheet 弹框
  *
  */
 
-/// 动画速度
-let kVelocity: CGFloat = 1000
-
 import UIKit
-
-struct SheetHeightModel {
-    /// 列表和底部按钮容器的间距
-    var padding: CGFloat = 0
-    /// 按钮容器与按钮底部或顶部的间距
-    var margin: CGFloat = 0
-    /// 按钮的高度
-    var button: CGFloat = 44
-    /// contentView顶部圆角
-    var cornerRadius: CGFloat = 8
-}
 
 class SheetAlertButton: UIButton {
     /// 选中的选项回调: model选中想的数据
     open var selectedModel: ((_ model: SheetCellModel) -> Void)?
     /// 底部按钮选中回调: style样式
-    open var selectedBottomButton: ((_ style: SheetStyle) -> Void)?
+    open var selectedButton: (() -> Void)?
     
-    /// 列表最多显示几行
-    private let kMaxCell: Int = 4
     struct Layout {
         static let safeViewHeight: CGFloat = isFullScreen ? 34 : 0
     }
-    /// 底部按钮的标题
-    open var bottomButtonTitle: String? = "取消" {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 底部按钮的标题颜色
-    open var bottomButtonTitleColor: UIColor? = UIColor.init(red: 51/255, green: 51/255, blue: 51/255, alpha: 1) {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 底部按钮的标题字号
-    open var bottomButtonTitleFont: UIFont? = UIFont.systemFont(ofSize: 14) {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 底部按钮左边间距
-    open var bottomButtonLeftMargin: CGFloat = 0 {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 底部按钮右边间距
-    open var bottomButtonRightMargin: CGFloat = 0 {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 底部按钮容器和safeView颜色
-    var bottomBackgroundColor: UIColor = .white {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 底部按钮的背景色
-    var bottomButtonBackgroundColor: UIColor = .white {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    
-    var bottomButtonCornerRadius: CGFloat = 0 {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 内容视图的背景色
-    var contentViewBackgroundColor: UIColor = UIColor.init(red: 242/255, green: 242/255, blue: 242/255, alpha: 1) {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    /// 动画时间(弹框弹出世间)
-    private var duration: TimeInterval = TimeInterval(200 / kVelocity)
     /// 底部按钮
     private lazy var bottomButton: UIButton = {
         let button = UIButton.init(type: .custom)
@@ -114,7 +42,6 @@ class SheetAlertButton: UIButton {
         view.backgroundColor = .white
         return view
     }()
-    
     /// 承载底部按钮和列表
     private lazy var contentView: UIView = {
         let view = UIView.init()
@@ -134,55 +61,55 @@ class SheetAlertButton: UIButton {
     /// 列表数据
     private let datalist: [SheetCellModel]
     /// 底部视图高度数据(为了初始化确定高度)
-    private let heightModel: SheetHeightModel
-    /// 样式
-    private let style: SheetStyle
+    private let configure: SheetConfigure
     
-    init(style: SheetStyle, data: [SheetCellModel], heightModel: SheetHeightModel = SheetHeightModel.init(padding: 0, margin: 0, button: 44, cornerRadius: 8)) {
-        self.style = style
+    init(data: [SheetCellModel], configure: SheetConfigure = SheetConfigure.init(padding: 0, margin: 0, buttonHeight: 44, cornerRadius: 8)) {
         self.datalist = data
-        self.heightModel = heightModel
+        self.configure = configure
         super.init(frame: .zero)
-        contentView.frame = getContentViewFrame(data: data, heightModel: heightModel)
+        initialConfigure(configure: configure)
+        contentView.frame = getContentViewFrame(data: data, configure: configure)
         setupUI()
         fadeInTransform()
         action()
     }
     
-    /// tableView的高度
-    private func getTableViewHeight(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGFloat {
-        var contentHeight: CGFloat = 0
-        data.enumerated().forEach { [weak self] (index, item) in
-            guard let `self`  = self else { return }
-            if index < kMaxCell {
-                contentHeight += item.height ?? 0
+    func initialConfigure(configure: SheetConfigure) {
+        /// 属性设置需要在这里进行更新
+        bottomButton.setTitle(configure.buttonTitle, for: .normal)
+        bottomButton.setTitleColor(configure.buttonTitleColor, for: .normal)
+        bottomButton.titleLabel?.font = configure.buttonTitleFont
+        bottomButton.backgroundColor = configure.buttonBackgroundColor
+        bottomButtonContainer.backgroundColor = configure.bottomBackgroundColor
+        safeView.backgroundColor = configure.bottomBackgroundColor
+        contentView.backgroundColor = configure.contentViewBackgroundColor
+        bottomButton.layer.masksToBounds = true
+        bottomButton.layer.cornerRadius = configure.buttonCornerRadius
+    }
+    
+    private func action() {
+        /// 透明背景视图的事件
+        self.action { [weak self] (sender) in
+            guard let `self` = self else { return }
+            self.fadeOutTransform()
+        }
+        
+        /// 底部按钮的事件
+        switch configure.style {
+        case .cancel:
+            self.bottomButton.action { [weak self] (sender) in
+                guard let `self` = self else { return }
+                self.fadeOutTransform()
+                self.selectedButton?()
             }
+            
         }
-        return contentHeight
-    }
-    /// contentView的高度(总高度)
-    private func getContentViewtHeight(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGFloat {
-        var contentHeight: CGFloat = 0
-        for item in data {
-            contentHeight += item.height ?? 0
-        }
-        let tableViewHeight = getTableViewHeight(data: data, heightModel: heightModel)
-        contentHeight = tableViewHeight + heightModel.button + 2*heightModel.margin + heightModel.padding + Layout.safeViewHeight + heightModel.cornerRadius
-        return contentHeight
-    }
-    /// contentView的frame
-    private func getContentViewFrame(data: [SheetCellModel], heightModel: SheetHeightModel) -> CGRect {
-        let contentHeight: CGFloat = getContentViewtHeight(data: data, heightModel: heightModel)
-        return CGRect(x: 0, y: SCREEN_HEIGHT, width: SCREEN_WIDTH, height: contentHeight)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        
     }
     
     private func setupUI() {
         /// 列表行数大于 kMaxCell 可以滑动
-        tableView.isScrollEnabled = (datalist.count > kMaxCell)
+        tableView.isScrollEnabled = (datalist.count > configure.maxRow)
         /// 设置一个初始的alpha值
         self.backgroundColor = UIColor.init(white: 1, alpha: 0.0)
         UIApplication.shared.windows.last?.addSubview(self)
@@ -191,38 +118,20 @@ class SheetAlertButton: UIButton {
         contentView.addSubview(bottomButtonContainer)
         bottomButtonContainer.addSubview(bottomButton)
         contentView.addSubview(tableView)
-        let tableViewHeight: CGFloat = getTableViewHeight(data: self.datalist, heightModel: self.heightModel)
+        let tableViewHeight: CGFloat = getTableViewHeight(data: self.datalist, configure: self.configure)
         
         topView.snp.makeConstraints {
             $0.left.top.right.equalToSuperview()
-            $0.height.equalTo(heightModel.cornerRadius)
+            $0.height.equalTo(configure.cornerRadius)
         }
         
         tableView.snp.makeConstraints {
             $0.left.right.equalToSuperview()
-            $0.top.equalToSuperview().offset(heightModel.cornerRadius)
+            $0.top.equalToSuperview().offset(configure.cornerRadius)
             $0.height.equalTo(tableViewHeight)
         }
         self.fillSuperview()
-        layout()
-    }
-    
-    override func layoutIfNeeded() {
-        /// 属性设置需要在这里进行更新
-        bottomButton.setTitle(bottomButtonTitle, for: .normal)
-        bottomButton.setTitleColor(self.bottomButtonTitleColor, for: .normal)
-        bottomButton.titleLabel?.font = self.bottomButtonTitleFont
-        bottomButton.backgroundColor = bottomButtonBackgroundColor
-        bottomButtonContainer.backgroundColor = bottomBackgroundColor
-        safeView.backgroundColor = bottomBackgroundColor
-        contentView.backgroundColor = contentViewBackgroundColor
-        bottomButton.layer.masksToBounds = true
-        bottomButton.layer.cornerRadius = bottomButtonCornerRadius
         
-        layout()
-    }
-    
-    private func layout() {
         if isFullScreen {
             contentView.addSubview(safeView)
             safeView.snp.remakeConstraints {
@@ -233,15 +142,45 @@ class SheetAlertButton: UIButton {
         bottomButtonContainer.snp.remakeConstraints {
             $0.left.right.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-Layout.safeViewHeight)
-            $0.height.equalTo(heightModel.button + 2*heightModel.margin)
+            $0.height.equalTo(configure.buttonHeight + 2*configure.margin)
         }
         bottomButton.snp.remakeConstraints {
-            $0.left.equalToSuperview().offset(bottomButtonLeftMargin)
+            $0.left.equalToSuperview().offset(configure.buttonLeftMargin)
             $0.centerY.equalToSuperview()
-            $0.right.equalToSuperview().offset(-bottomButtonRightMargin)
-            $0.height.equalTo(heightModel.button)
+            $0.right.equalToSuperview().offset(-configure.buttonRightMargin)
+            $0.height.equalTo(configure.buttonHeight)
         }
         rectCorner()
+    }
+    
+    /// tableView的高度
+    private func getTableViewHeight(data: [SheetCellModel], configure: SheetConfigure) -> CGFloat {
+        var contentHeight: CGFloat = 0
+        data.enumerated().forEach { (index, item) in
+            if index < configure.maxRow {
+                contentHeight += item.height ?? 0
+            }
+        }
+        return contentHeight
+    }
+    /// contentView的高度(总高度)
+    private func getContentViewtHeight(data: [SheetCellModel], configure: SheetConfigure) -> CGFloat {
+        var contentHeight: CGFloat = 0
+        for item in data {
+            contentHeight += item.height ?? 0
+        }
+        let tableViewHeight = getTableViewHeight(data: data, configure: configure)
+        contentHeight = tableViewHeight + configure.buttonHeight + 2*configure.margin + configure.padding + Layout.safeViewHeight + configure.cornerRadius
+        return contentHeight
+    }
+    /// contentView的frame
+    private func getContentViewFrame(data: [SheetCellModel], configure: SheetConfigure) -> CGRect {
+        let contentHeight: CGFloat = getContentViewtHeight(data: data, configure: configure)
+        return CGRect(x: 0, y: SCREEN_HEIGHT, width: SCREEN_WIDTH, height: contentHeight)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
@@ -253,7 +192,6 @@ extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(SheetCell.self, indexPath)
-//        cell.backgroundColor = .systemTeal
         if indexPath.row < datalist.count {
             cell.model = datalist[indexPath.row]
         }
@@ -270,9 +208,9 @@ extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        debugPrint("indexPath.row===== \(indexPath.row)")
         if let model = index(for: indexPath) {
             selectedModel?(model)
+            self.fadeOutTransform()
         }
     }
     private func index(for indexPath: IndexPath) -> SheetCellModel? {
@@ -282,37 +220,12 @@ extension SheetAlertButton: UITableViewDataSource, UITableViewDelegate {
     
 }
 
-/// 底部button事件
-extension SheetAlertButton {
-    private func action() {
-        /// 透明背景视图的事件
-        self.action { [weak self] (sender) in
-            guard let `self` = self else { return }
-            self.fadeOutTransform()
-        }
-        
-        /// 底部按钮的事件
-        switch self.style {
-        case .cancel:
-            self.bottomButton.action { [weak self] (sender) in
-                guard let `self` = self else { return }
-                self.fadeOutTransform()
-                self.selectedBottomButton?(self.style)
-            }
-        default:
-            break
-        }
-        
-    }
-    
-}
-
 /// 动画
 extension SheetAlertButton {
     
     func fadeInTransform() {
         let y: CGFloat = -(self.contentView.bounds.size.height)
-        UIView.animate(withDuration: self.duration, delay: 0.0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: configure.duration, delay: 0.0, options: .curveEaseIn, animations: {
             self.backgroundColor = UIColor.init(white: 0, alpha: 0.6)
             self.contentView.transform = CGAffineTransform(translationX: 0, y: y)
             self.rectCorner()
@@ -320,7 +233,7 @@ extension SheetAlertButton {
     }
     
     func fadeOutTransform() {
-        UIView.animate(withDuration: self.duration, delay: 0.0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: configure.duration, delay: 0.0, options: .curveEaseIn, animations: {
             self.backgroundColor = UIColor.init(white: 0, alpha: 0.0)
             self.contentView.transform = CGAffineTransform(translationX: 0, y: 0)
         }) { (true) in
@@ -331,7 +244,7 @@ extension SheetAlertButton {
     // 设置contentView圆角路径
     func rectCorner() {
         /// 注意: 这里切圆角需要被切得视图用frame布局
-        contentView.layer.mask = cornerLayer(contentView, corner: [.topLeft, .topRight], radii: CGSize(width: heightModel.cornerRadius, height: heightModel.cornerRadius))
+        contentView.layer.mask = cornerLayer(contentView, corner: [.topLeft, .topRight], radii: CGSize(width: configure.cornerRadius, height: configure.cornerRadius))
     }
     
     private func cornerLayer(_ view: UIView, corner: UIRectCorner, radii: CGSize) -> CALayer {
@@ -344,6 +257,7 @@ extension SheetAlertButton {
 }
 
 
+/// SheetCell 自定义
 class SheetCell: UITableViewCell {
     
     open var model: SheetCellModel? {

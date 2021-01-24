@@ -54,15 +54,29 @@ class SheetListTableViewController: UITableViewController {
             
             let data: [SheetCellModel] = [model1,model2,model3,model4]
             
-            let heightModel = SheetHeightModel.init(padding: 10, margin: 10, button: 50, cornerRadius: 20)
+            var configure = SheetConfigure.init()
+            configure.padding = 10
+            configure.margin = 10
+            configure.buttonHeight = 50
+            configure.cornerRadius = 20
+            configure.buttonTitle = "取消"
+            configure.contentViewBackgroundColor = UIColor.systemGroupedBackground
+            configure.style = .cancel
+            configure.buttonLeftMargin = 40
+            configure.buttonRightMargin = 40
+            configure.buttonCornerRadius = 50 / 2
+            configure.bottomBackgroundColor = .white
+            configure.buttonBackgroundColor = .white
             
-            let alert = SheetAlertButton.init(style: .cancel, data: data, heightModel: heightModel)
-            alert.bottomButtonTitle = "取消"
-            alert.bottomButtonLeftMargin = 40
-            alert.bottomButtonRightMargin = 40
-            alert.bottomButtonCornerRadius = 50 / 2
-//            alert.bottomBackgroundColor = .systemTeal
-//            alert.bottomButtonBackgroundColor = .lightGray
+            let alert = SheetAlertButton.init(data: data, configure: configure)
+            alert.selectedButton = {
+                debugPrint("style========")
+            }
+            
+            alert.selectedModel = { model in
+                debugPrint("model.title======== \(String(describing: model.title))")
+            }
+            
             
         default:
             break

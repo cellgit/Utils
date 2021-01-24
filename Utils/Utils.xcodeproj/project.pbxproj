@@ -17,7 +17,6 @@
 		CE891A1A25B55733003B286E /* SomeCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A1925B55733003B286E /* SomeCustomView.swift */; };
 		CE891A2125B55F19003B286E /* AlertStyleZeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A2025B55F19003B286E /* AlertStyleZeroViewController.swift */; };
 		CE891A2725B56A56003B286E /* SheetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A2625B56A56003B286E /* SheetListTableViewController.swift */; };
-		CE891A2F25B56ABF003B286E /* AlphaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A2E25B56ABF003B286E /* AlphaButton.swift */; };
 		CE891A3425B56BB3003B286E /* UIButton+ClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A3325B56BB3003B286E /* UIButton+ClosureButton.swift */; };
 		CE891A3925B56E7E003B286E /* SheetAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A3825B56E7E003B286E /* SheetAlertButton.swift */; };
 		CE891A4325B5742C003B286E /* ZJYSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A4225B5742C003B286E /* ZJYSize.swift */; };
@@ -67,7 +66,6 @@
 		CE891A1925B55733003B286E /* SomeCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeCustomView.swift; sourceTree = "<group>"; };
 		CE891A2025B55F19003B286E /* AlertStyleZeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStyleZeroViewController.swift; sourceTree = "<group>"; };
 		CE891A2625B56A56003B286E /* SheetListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetListTableViewController.swift; sourceTree = "<group>"; };
-		CE891A2E25B56ABF003B286E /* AlphaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaButton.swift; sourceTree = "<group>"; };
 		CE891A3325B56BB3003B286E /* UIButton+ClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+ClosureButton.swift"; sourceTree = "<group>"; };
 		CE891A3825B56E7E003B286E /* SheetAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAlertButton.swift; sourceTree = "<group>"; };
 		CE891A4225B5742C003B286E /* ZJYSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYSize.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				CE891A2625B56A56003B286E /* SheetListTableViewController.swift */,
-				CE891A2E25B56ABF003B286E /* AlphaButton.swift */,
 				CE891A3825B56E7E003B286E /* SheetAlertButton.swift */,
 				CE891A4F25B57EE4003B286E /* SheetStyle.swift */,
 			);
@@ -463,7 +460,6 @@
 				CE891A5025B57EE4003B286E /* SheetStyle.swift in Sources */,
 				CE891A4325B5742C003B286E /* ZJYSize.swift in Sources */,
 				CE8919CA25B5313B003B286E /* ListTableViewController.swift in Sources */,
-				CE891A2F25B56ABF003B286E /* AlphaButton.swift in Sources */,
 				CE8919EF25B5365A003B286E /* UINib+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

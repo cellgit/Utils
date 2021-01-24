@@ -44,7 +44,6 @@ struct SheetConfigure {
     public var buttonRightMargin: CGFloat = 0
     /// 底部按钮圆角大小
     var buttonCornerRadius: CGFloat = 0
-    
     /// 底部按钮的背景色
     var buttonBackgroundColor: UIColor = .white
     

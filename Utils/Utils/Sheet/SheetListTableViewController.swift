@@ -5,36 +5,14 @@
 //  Created by liuhongli on 2021/1/18.
 //
 
+
+/**
+ * 示例
+ */
+
 import UIKit
 
 class SheetListTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.register(UITableViewCell.self)
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return SheetStyle.allCases.count
-    }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-
-        cell.textLabel?.text = "\(SheetStyle.allCases[indexPath.row].self)"
-
-        return cell
-    }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -48,6 +26,7 @@ class SheetListTableViewController: UITableViewController {
             let data: [SheetCellModel] = [model1,model2,model3,model4]
             
             var configure = SheetConfigure.init()
+            /// SheetConfigure设置如果不配置则使用默认值
             configure.padding = 10
             configure.margin = 10
             configure.buttonHeight = 50
@@ -74,6 +53,35 @@ class SheetListTableViewController: UITableViewController {
         default:
             break
         }
+    }
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.register(UITableViewCell.self)
+    }
+
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return SheetStyle.allCases.count
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+
+        cell.textLabel?.text = "\(SheetStyle.allCases[indexPath.row].self)"
+
+        return cell
     }
 
 

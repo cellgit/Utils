@@ -23,6 +23,8 @@ struct SheetConfigure {
     public var style: SheetStyle = .cancel
     /// 列表最多显示几行
     public var maxRow: Int = 4
+    /// 动画时间(弹框弹出世间)
+    public var duration: TimeInterval = TimeInterval(200 / kVelocity)
     
     /// 列表和底部按钮容器的间距
     public var padding: CGFloat = 0
@@ -43,18 +45,15 @@ struct SheetConfigure {
     /// 底部按钮右边间距
     public var buttonRightMargin: CGFloat = 0
     /// 底部按钮圆角大小
-    var buttonCornerRadius: CGFloat = 0
+    public var buttonCornerRadius: CGFloat = 0
     /// 底部按钮的背景色
-    var buttonBackgroundColor: UIColor = .white
+    public var buttonBackgroundColor: UIColor = .white
     
     /// 底部按钮容器和safeView颜色
-    var bottomBackgroundColor: UIColor = .white
+    public var bottomBackgroundColor: UIColor = .white
     
     /// 内容视图的背景色
-    var contentViewBackgroundColor: UIColor = UIColor.init(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
-    
-    /// 动画时间(弹框弹出世间)
-    public var duration: TimeInterval = TimeInterval(200 / kVelocity)
+    public var contentViewBackgroundColor: UIColor = UIColor.init(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
 }
 
 

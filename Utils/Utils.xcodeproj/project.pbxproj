@@ -24,6 +24,12 @@
 		CE891A5025B57EE4003B286E /* SheetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE891A4F25B57EE4003B286E /* SheetStyle.swift */; };
 		CEA6F2B225B7FEA700C91997 /* PCoverTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6F2B125B7FEA700C91997 /* PCoverTitleView.swift */; };
 		CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF979D259032C6007D6691 /* PriorityQueue.swift */; };
+		CEED6EAA25CCD41F008F8305 /* PhotoBroswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6EA925CCD41F008F8305 /* PhotoBroswerViewController.swift */; };
+		CEED6EB225CCE151008F8305 /* ZJYPhotoBroswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6EB125CCE151008F8305 /* ZJYPhotoBroswerView.swift */; };
+		CEED6ECF25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */; };
+		CEED6ED725CD0D2B008F8305 /* ZJYPhotoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */; };
+		CEED6EE225CD2D1D008F8305 /* UILabelPadding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6EE125CD2D1D008F8305 /* UILabelPadding2.swift */; };
+		CEED6F2D25CD3DE8008F8305 /* UILabelPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6F2C25CD3DE8008F8305 /* UILabelPadding.swift */; };
 		CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAE90225B924CF0049C040 /* PopPickerView.swift */; };
 		F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B16CC25AB6A620045D926 /* CustomSlider.swift */; };
 		F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F31200258DC1FB00CBA614 /* AppDelegate.swift */; };
@@ -73,6 +79,12 @@
 		CE891A4F25B57EE4003B286E /* SheetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetStyle.swift; sourceTree = "<group>"; };
 		CEA6F2B125B7FEA700C91997 /* PCoverTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCoverTitleView.swift; sourceTree = "<group>"; };
 		CEAF979D259032C6007D6691 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		CEED6EA925CCD41F008F8305 /* PhotoBroswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBroswerViewController.swift; sourceTree = "<group>"; };
+		CEED6EB125CCE151008F8305 /* ZJYPhotoBroswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoBroswerView.swift; sourceTree = "<group>"; };
+		CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoCollectionCell.swift; sourceTree = "<group>"; };
+		CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoScrollView.swift; sourceTree = "<group>"; };
+		CEED6EE125CD2D1D008F8305 /* UILabelPadding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelPadding2.swift; sourceTree = "<group>"; };
+		CEED6F2C25CD3DE8008F8305 /* UILabelPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelPadding.swift; sourceTree = "<group>"; };
 		CEFAE90225B924CF0049C040 /* PopPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopPickerView.swift; sourceTree = "<group>"; };
 		D6EE8A61890453FB4EB890A2 /* Pods-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.debug.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		F22B16CC25AB6A620045D926 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
@@ -185,6 +197,17 @@
 			path = Queue;
 			sourceTree = "<group>";
 		};
+		CEED6EA825CCD3DA008F8305 /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				CEED6EA925CCD41F008F8305 /* PhotoBroswerViewController.swift */,
+				CEED6EB125CCE151008F8305 /* ZJYPhotoBroswerView.swift */,
+				CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */,
+				CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */,
+			);
+			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
 		CEFAE90125B914B30049C040 /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +248,7 @@
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
 				CE8919E025B535C3003B286E /* Extension */,
+				CEED6EA825CCD3DA008F8305 /* PhotoBrowser */,
 				F2F31239258DC25500CBA614 /* UtilsForUI */,
 				CEAF979C2590328C007D6691 /* Queue */,
 				CE8919D425B532E9003B286E /* Alert */,
@@ -260,6 +284,8 @@
 		F2F31239258DC25500CBA614 /* UtilsForUI */ = {
 			isa = PBXGroup;
 			children = (
+				CEED6EE125CD2D1D008F8305 /* UILabelPadding2.swift */,
+				CEED6F2C25CD3DE8008F8305 /* UILabelPadding.swift */,
 				F2F3123A258DC26800CBA614 /* LinedLabel.swift */,
 			);
 			path = UtilsForUI;
@@ -441,19 +467,25 @@
 			files = (
 				CE8919EA25B535F9003B286E /* UITableView+Extension.swift in Sources */,
 				CEA6F2B225B7FEA700C91997 /* PCoverTitleView.swift in Sources */,
+				CEED6EAA25CCD41F008F8305 /* PhotoBroswerViewController.swift in Sources */,
 				CE891A2725B56A56003B286E /* SheetListTableViewController.swift in Sources */,
+				CEED6F2D25CD3DE8008F8305 /* UILabelPadding.swift in Sources */,
 				CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */,
 				CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */,
 				CE8919E225B535C9003B286E /* UIView+Identifier.swift in Sources */,
 				F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,
+				CEED6ECF25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift in Sources */,
 				CE891A3425B56BB3003B286E /* UIButton+ClosureButton.swift in Sources */,
+				CEED6ED725CD0D2B008F8305 /* ZJYPhotoScrollView.swift in Sources */,
+				CEED6EB225CCE151008F8305 /* ZJYPhotoBroswerView.swift in Sources */,
 				F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */,
 				CE8919D625B5330E003B286E /* AlertListTableViewController.swift in Sources */,
 				CE891A1A25B55733003B286E /* SomeCustomView.swift in Sources */,
 				F2F31203258DC1FB00CBA614 /* SceneDelegate.swift in Sources */,
 				CE8919D025B531BF003B286E /* ExampleEnum.swift in Sources */,
 				F2F3123B258DC26800CBA614 /* LinedLabel.swift in Sources */,
+				CEED6EE225CD2D1D008F8305 /* UILabelPadding2.swift in Sources */,
 				CE891A2125B55F19003B286E /* AlertStyleZeroViewController.swift in Sources */,
 				CE891A4825B5745E003B286E /* ZJYDevice.swift in Sources */,
 				CE891A3925B56E7E003B286E /* SheetAlertButton.swift in Sources */,
@@ -566,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -621,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

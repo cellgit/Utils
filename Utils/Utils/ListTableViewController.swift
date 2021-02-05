@@ -63,6 +63,10 @@ class ListTableViewController: UITableViewController {
                 debugPrint("resultStr===== \(resultStr)")
             }
             pickerView.show()
+        case ExampleEnum.photoBroswer.rawValue:
+            let vc = PhotoBroswerViewController.init()
+//            self.present(vc, animated: true, completion: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

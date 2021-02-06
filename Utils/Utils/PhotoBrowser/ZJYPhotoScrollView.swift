@@ -10,6 +10,8 @@ import UIKit
 class ZJYPhotoScrollView: UIScrollView, UIScrollViewDelegate {
     
     public var imageView: UIImageView!
+    
+    private var isZoom: Bool = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,18 +45,25 @@ class ZJYPhotoScrollView: UIScrollView, UIScrollViewDelegate {
     
     @objc func handleDoubleTap(sender: UITapGestureRecognizer) {
         debugPrint("handleDoubleTap")
-        
-        setZoomScale(maximumZoomScale, animated: true)
-        
+        isZoom == false ? toMaximumZoomScale() : toMinimunZoomScale()
     }
     @objc func handleSingleTap(sender: UITapGestureRecognizer) {
         debugPrint("handleSingleTap")
-        setZoomScale(minimumZoomScale, animated: true)
+        toMinimunZoomScale()
     }
-    
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
+    }
+    
+    func toMinimunZoomScale() {
+        setZoomScale(minimumZoomScale, animated: true)
+        isZoom = false
+    }
+    
+    func toMaximumZoomScale() {
+        setZoomScale(maximumZoomScale, animated: true)
+        isZoom = true
     }
     
     

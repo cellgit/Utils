@@ -36,7 +36,7 @@ class ZJYGuideMaskView: UIView {
     
     var timer: Timer!
     /// 自动播放是否结束
-    fileprivate var isAutoPlayEnded: Bool = false
+    fileprivate var isPlayEnded: Bool = false
     
     init(parentView: UIView, images: [String], imageType: ImageResourceType = .local, isAutoPlay: Bool = false, interval: TimeInterval = 2) {
         self.parentView = parentView
@@ -84,7 +84,7 @@ class ZJYGuideMaskView: UIView {
     }
     
     func removeGuideViewAction() {
-        if isAutoPlayEnded == true {
+        if isPlayEnded == true {
             self.removeFromSuperview()
         }
         else {
@@ -116,6 +116,6 @@ extension ZJYGuideMaskView {
     func stop() {
         timer.invalidate()
         timer = nil
-        isAutoPlayEnded = true
+        isPlayEnded = true
     }
 }

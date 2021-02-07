@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FE3A75A9812BBF3D4C07A77 /* Pods_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2326E16D412D44349106B0C4 /* Pods_Utils.framework */; };
+		CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */; };
 		CE8919CA25B5313B003B286E /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8919C825B5313B003B286E /* ListTableViewController.swift */; };
 		CE8919D025B531BF003B286E /* ExampleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8919CF25B531BF003B286E /* ExampleEnum.swift */; };
 		CE8919D625B5330E003B286E /* AlertListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8919D525B5330E003B286E /* AlertListTableViewController.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0FFE6ABAFEDEFA5A85B6FE7E /* Pods-Utils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.release.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.release.xcconfig"; sourceTree = "<group>"; };
 		2326E16D412D44349106B0C4 /* Pods_Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYGuideMaskView.swift; sourceTree = "<group>"; };
 		CE8919C825B5313B003B286E /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		CE8919CF25B531BF003B286E /* ExampleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleEnum.swift; sourceTree = "<group>"; };
 		CE8919D525B5330E003B286E /* AlertListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListTableViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */,
 				CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */,
 				CEED6EB125CCE151008F8305 /* ZJYPhotoBroswerView2.swift */,
+				CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */,
 			);
 			path = PhotoBrowser;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */,
 				CE8919E225B535C9003B286E /* UIView+Identifier.swift in Sources */,
 				F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */,
+				CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,
 				F2E3148125CD7C7E000004E8 /* ZJYPhotoCollectionView.swift in Sources */,
 				CEED6ECF25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift in Sources */,

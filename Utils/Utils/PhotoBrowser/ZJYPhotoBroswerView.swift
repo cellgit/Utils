@@ -63,10 +63,13 @@ class ZJYPhotoBroswerView: UIView {
         return v
     }()
     
+    var guideView: ZJYGuideMaskView!
+    
     init(photos: [String]) {
         self.photos = photos
         super.init(frame: .zero)
         self.initialUI()
+        self.setupGuideView()
     }
 
     required init?(coder: NSCoder) {
@@ -114,4 +117,13 @@ class ZJYPhotoBroswerView: UIView {
         
     }
     
+}
+
+extension ZJYPhotoBroswerView {
+    func setupGuideView() {
+        let images = ["hand_left_right", "hand_small_big"]
+        let guideView: ZJYGuideMaskView = ZJYGuideMaskView.init(parentView: self, images: images, imageType: .local, isAutoPlay: true, interval: 2)
+        self.addSubview(guideView)
+        guideView.fillSuperview()
+    }
 }

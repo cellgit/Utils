@@ -8,7 +8,7 @@
 import UIKit
 
 
-enum ChangePageType {
+enum StepActionType {
     case previous
     case next
 }
@@ -16,7 +16,7 @@ enum ChangePageType {
 class ZJYPhotoCollectionView: UICollectionView {
     
     /// 切换cell,前一页或下一页
-    public var changePageAction: ((_ type: ChangePageType) -> Void)?
+    public var changePageAction: ((_ type: StepActionType) -> Void)?
     
     public var didScrollToPage: ((_ current: Int, _ total: Int) -> Void)?
     

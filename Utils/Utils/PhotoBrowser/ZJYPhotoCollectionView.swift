@@ -23,8 +23,6 @@ class ZJYPhotoCollectionView: UICollectionView {
     private let KZJYPhotoCollectionCell = "ZJYPhotoCollectionCell"
     
     struct Layout {
-        static let lastBtnWidth: CGFloat = 20
-        static let lastBtnHeight: CGFloat = 20
         static let itemHeight: CGFloat = SCREEN_HEIGHT
         static let itemWidth: CGFloat = SCREEN_WIDTH
         static let itemPadding: CGFloat = 0//16*scale_w
@@ -109,6 +107,7 @@ class ZJYPhotoCollectionView: UICollectionView {
     func previousPage() {
         if self.currentPage <= 0 { return }
         else {
+            sendNotification()
             self.currentPage = self.currentPage - 1
             var contentOffset = CGFloat(self.currentPage) * 1*(Layout.itemWidth+Layout.itemPadding)
             //最小偏移
@@ -120,7 +119,8 @@ class ZJYPhotoCollectionView: UICollectionView {
     }
     func nextPage() {
         //最大页数为(count / 1)  - 1
-        if self.currentPage < photos.count / 1 {
+        if self.currentPage < photos.count / 1 - 1 {
+            sendNotification()
             self.currentPage = self.currentPage + 1
             var contentOffset = CGFloat(self.currentPage) * 1*(Layout.itemWidth+Layout.itemPadding)
             //最大偏移
@@ -157,8 +157,20 @@ extension ZJYPhotoCollectionView: UICollectionViewDataSource, UICollectionViewDe
 extension ZJYPhotoCollectionView: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let offset_x = scrollView.contentOffset.x
-        let row: Int = Int(offset_x / (1*Layout.itemWidth+Layout.itemPadding))
+//        let row: Int = Int(offset_x / (1*Layout.itemWidth+Layout.itemPadding))
+        let row = Int(round(offset_x / (1*Layout.itemWidth+Layout.itemPadding)))
+        if row != currentPage {
+            sendNotification()
+        }
         self.currentPage = row
+    }
+    
+}
+
+extension ZJYPhotoCollectionView {
+    /// 通知
+    func sendNotification() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: KPhotoBroswerImageChangedNotification), object: nil, userInfo: nil)
     }
     
 }

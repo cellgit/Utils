@@ -12,11 +12,8 @@ class ZJYPhotoBroswerView: UIView {
     
     
     struct Layout {
-        static let lastBtnWidth: CGFloat = 20
-        static let lastBtnHeight: CGFloat = 20
-//        static let itemHeight: CGFloat = SCREEN_HEIGHT
-//        static let itemWidth: CGFloat = SCREEN_WIDTH
-//        static let itemPadding: CGFloat = 0//16*scale_w
+        static let lastBtnWidth: CGFloat = 25
+        static let lastBtnHeight: CGFloat = 50
         
         static let pageLabelHeight: CGFloat = 19
         static let pageLabelWidth: CGFloat = 60

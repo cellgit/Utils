@@ -37,6 +37,10 @@ class ZJYPhotoCollectionCell: UICollectionViewCell {
     func initialUI() {
         self.contentView.addSubview(scrollView)
         scrollView.fillSuperview()
+//        scrollView.snp.makeConstraints {
+//            $0.edges.equalToSuperview()
+//        }
+        
     }
     
     

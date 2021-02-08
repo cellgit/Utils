@@ -7,6 +7,8 @@
 
 import UIKit
 
+let KPhotoBroswerImageChangedNotification = "PhotoBroswerImageChangedNotification"
+
 class ZJYPhotoScrollView: UIScrollView, UIScrollViewDelegate {
     
     public var imageView: UIImageView!
@@ -22,7 +24,13 @@ class ZJYPhotoScrollView: UIScrollView, UIScrollViewDelegate {
         imageView = UIImageView.init(frame: self.bounds)
         addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
-        imageView.fillSuperview()
+//        imageView.fillSuperview()
+        
+        imageView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.width.equalTo(SCREEN_WIDTH)
+            $0.width.equalTo(SCREEN_HEIGHT)
+        }
         
         self.delegate = self
         self.maximumZoomScale = 2
@@ -36,6 +44,8 @@ class ZJYPhotoScrollView: UIScrollView, UIScrollViewDelegate {
         singleTap.require(toFail: doubleTap)
         addGestureRecognizer(singleTap)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(imageChanged(noti:)), name: NSNotification.Name(rawValue: KPhotoBroswerImageChangedNotification), object: nil)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -45,18 +55,18 @@ class ZJYPhotoScrollView: UIScrollView, UIScrollViewDelegate {
     
     @objc func handleDoubleTap(sender: UITapGestureRecognizer) {
         debugPrint("handleDoubleTap")
-        isZoom == false ? toMaximumZoomScale() : toMinimunZoomScale()
+        isZoom == false ? toMaximumZoomScale() : toMinimumZoomScale()
     }
     @objc func handleSingleTap(sender: UITapGestureRecognizer) {
         debugPrint("handleSingleTap")
-        toMinimunZoomScale()
+        toMinimumZoomScale()
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
     
-    func toMinimunZoomScale() {
+    func toMinimumZoomScale() {
         setZoomScale(minimumZoomScale, animated: true)
         isZoom = false
     }
@@ -64,6 +74,10 @@ class ZJYPhotoScrollView: UIScrollView, UIScrollViewDelegate {
     func toMaximumZoomScale() {
         setZoomScale(maximumZoomScale, animated: true)
         isZoom = true
+    }
+    
+    @objc func imageChanged(noti: Notification) {
+        toMinimumZoomScale()
     }
     
     

@@ -14,4 +14,6 @@ pod 'PagingViewKit', '~> 1.1.5'
 pod 'SKPhotoBrowser'
 pod 'Kingfisher', '~> 5.14.1'
 
+pod 'URLNavigator'
+
 end

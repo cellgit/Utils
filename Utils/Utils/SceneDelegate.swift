@@ -6,20 +6,36 @@
 //
 
 import UIKit
+import URLNavigator
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    private var navigator: NavigatorType?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        
+        let navigator = Navigator()
+        NavigationMap.initialize(navigator: navigator)
+        
+        
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .white
-        let nav = UINavigationController.init(rootViewController: ListTableViewController())
-        window?.rootViewController = nav
+//        let nav = UINavigationController.init(rootViewController: ListTableViewController())
+//        window?.rootViewController = nav
         window?.makeKeyAndVisible()
+        
+        
+        let userListViewController = UserListViewController(navigator: navigator)
+        window?.rootViewController = UINavigationController(rootViewController: userListViewController)
+
+        self.navigator = navigator
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -67,6 +67,9 @@ class ListTableViewController: UITableViewController {
             let vc = PhotoBroswerViewController.init()
 //            self.present(vc, animated: true, completion: nil)
             self.navigationController?.pushViewController(vc, animated: true)
+        case ExampleEnum.vlcPlayer.rawValue:
+            let vc = VLCPlayerViewController.init()
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

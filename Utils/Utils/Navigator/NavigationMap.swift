@@ -39,6 +39,10 @@ enum NavigationMap {
     context: Any?
   ) -> UIViewController? {
     guard let url = url.urlValue else { return nil }
+    
+    
+    debugPrint("url======== \(url)")
+    
     return SFSafariViewController(url: url)
   }
 

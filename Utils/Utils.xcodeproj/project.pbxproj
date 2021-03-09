@@ -34,6 +34,7 @@
 		CEB6E3B125ECC71D0014AD11 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E3B025ECC71D0014AD11 /* Repo.swift */; };
 		CEB6E3B725ECC7750014AD11 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E3B625ECC7750014AD11 /* GitHub.swift */; };
 		CEB6E3BF25ECC7850014AD11 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E3BE25ECC7850014AD11 /* HTTP.swift */; };
+		CEBC013825F5FAE10063EF3A /* VLCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC013725F5FAE10063EF3A /* VLCPlayerViewController.swift */; };
 		CEED6EAA25CCD41F008F8305 /* PhotoBroswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6EA925CCD41F008F8305 /* PhotoBroswerViewController.swift */; };
 		CEED6ECF25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */; };
 		CEED6ED725CD0D2B008F8305 /* ZJYPhotoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */; };
@@ -100,6 +101,7 @@
 		CEB6E3B025ECC71D0014AD11 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		CEB6E3B625ECC7750014AD11 /* GitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		CEB6E3BE25ECC7850014AD11 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		CEBC013725F5FAE10063EF3A /* VLCPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayerViewController.swift; sourceTree = "<group>"; };
 		CEED6EA925CCD41F008F8305 /* PhotoBroswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBroswerViewController.swift; sourceTree = "<group>"; };
 		CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoCollectionCell.swift; sourceTree = "<group>"; };
 		CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoScrollView.swift; sourceTree = "<group>"; };
@@ -268,6 +270,23 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		CEBC013525F5FAB90063EF3A /* VLC */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC013625F5FAB90063EF3A /* VLCPlayer */,
+			);
+			name = VLC;
+			path = Utils/VLC;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEBC013625F5FAB90063EF3A /* VLCPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CEBC013725F5FAE10063EF3A /* VLCPlayerViewController.swift */,
+			);
+			path = VLCPlayer;
+			sourceTree = "<group>";
+		};
 		CEED6EA825CCD3DA008F8305 /* PhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +341,7 @@
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
 				CE159AE825EC7A350025292E /* Navigator */,
 				CE8919E025B535C3003B286E /* Extension */,
+				CEBC013525F5FAB90063EF3A /* VLC */,
 				CEED6EA825CCD3DA008F8305 /* PhotoBrowser */,
 				F2F31239258DC25500CBA614 /* UtilsForUI */,
 				CEAF979C2590328C007D6691 /* Queue */,
@@ -572,6 +592,7 @@
 				CE891A2125B55F19003B286E /* AlertStyleZeroViewController.swift in Sources */,
 				CE891A4825B5745E003B286E /* ZJYDevice.swift in Sources */,
 				CE891A3925B56E7E003B286E /* SheetAlertButton.swift in Sources */,
+				CEBC013825F5FAE10063EF3A /* VLCPlayerViewController.swift in Sources */,
 				CEB6E3BF25ECC7850014AD11 /* HTTP.swift in Sources */,
 				CE891A5025B57EE4003B286E /* SheetStyle.swift in Sources */,
 				CE159AF325EC7AA80025292E /* UserViewController.swift in Sources */,

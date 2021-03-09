@@ -14,6 +14,7 @@ enum ExampleEnum: Int,CaseIterable {
     case linedLabel = 2
     case pickerView = 3
     case photoBroswer = 4
+    case vlcPlayer = 5
 }
 
 

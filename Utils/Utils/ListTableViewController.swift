@@ -44,6 +44,8 @@ class ListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        debugPrint("indexPath.row======= \(indexPath.row)")
+        
         switch indexPath.row {
         case ExampleEnum.alert.rawValue:
             let alertViewController = AlertListTableViewController.init(style: .plain)

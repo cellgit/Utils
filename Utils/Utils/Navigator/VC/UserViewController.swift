@@ -24,9 +24,9 @@ final class UserViewController: UIViewController {
 
   // MARK: Initializing
 
-  init(navigator: NavigatorType, username: String) {
+    init(navigator: NavigatorType, json: [String: Any]) {
     self.navigator = navigator
-    self.username = username
+        self.username = json["name"] as? String ?? ""
     super.init(nibName: nil, bundle: nil)
     self.title = "\(username)'s Repositories"
   }

@@ -15,22 +15,26 @@ import URLNavigator
 
 enum NavigationMap {
   static func initialize(navigator: NavigatorType) {
-    navigator.register("navigator://user/<username>") { url, values, context in
-      guard let username = values["username"] as? String else { return nil }
-        
-        return UserViewController.init(navigator: navigator, username: username)
-        
-//      return UserViewController(navigator: navigator, username: username)
-    }
-    navigator.register("http://<path:_>", self.webViewControllerFactory)
-    navigator.register("https://<path:_>", self.webViewControllerFactory)
-
-    navigator.handle("navigator://alert", self.alert(navigator: navigator))
-    navigator.handle("navigator://<path:_>") { (url, values, context) -> Bool in
-      // No navigator match, do analytics or fallback function here
-      print("[Navigator] NavigationMap.\(#function):\(#line) - global fallback function is called")
-      return true
-    }
+    
+    
+    debugPrint("navigator======= \(navigator)")
+    
+//    navigator.register("navigator://user/<username>") { url, values, context in
+//      guard let username = values["username"] as? String else { return nil }
+//        
+////        return UserViewController.init(navigator: navigator, username: username)
+//        
+//        return UserViewController.init(navigator: navigator, json: values)
+//    }
+//    navigator.register("http://<path:_>", self.webViewControllerFactory)
+//    navigator.register("https://<path:_>", self.webViewControllerFactory)
+//
+//    navigator.handle("navigator://alert", self.alert(navigator: navigator))
+//    navigator.handle("navigator://<path:_>") { (url, values, context) -> Bool in
+//      // No navigator match, do analytics or fallback function here
+//      print("[Navigator] NavigationMap.\(#function):\(#line) - global fallback function is called")
+//      return true
+//    }
   }
 
   private static func webViewControllerFactory(

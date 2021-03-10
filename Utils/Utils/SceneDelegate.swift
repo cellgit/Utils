@@ -18,9 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         
-        let navigator = Navigator()
-        NavigationMap.initialize(navigator: navigator)
+//        let navigator = Navigator()
+//        NavigationMap.initialize(navigator: navigator)
         
+        
+        
+        
+        
+        
+        
+        let navigator = Navigator()
+        let params = NavigationParams.user(navigator: navigator, param: ["name":"userlink"])
+        NavigationEnum.initialize(navigator: navigator, params: params)
         
         
         guard let windowScene = (scene as? UIWindowScene) else { return }

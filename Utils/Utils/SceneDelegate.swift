@@ -36,15 +36,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .white
-//        let nav = UINavigationController.init(rootViewController: ListTableViewController())
-//        window?.rootViewController = nav
+        let nav = UINavigationController.init(rootViewController: ListTableViewController())
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
         
-        let userListViewController = UserListViewController(navigator: navigator)
-        window?.rootViewController = UINavigationController(rootViewController: userListViewController)
-
-        self.navigator = navigator
+//        let userListViewController = UserListViewController(navigator: navigator)
+//        window?.rootViewController = UINavigationController(rootViewController: userListViewController)
+//        self.navigator = navigator
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

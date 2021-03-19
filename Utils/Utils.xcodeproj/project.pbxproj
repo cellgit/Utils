@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4FE3A75A9812BBF3D4C07A77 /* Pods_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2326E16D412D44349106B0C4 /* Pods_Utils.framework */; };
+		CE0180E126049CB6004095EA /* PlayerDesign.md in Resources */ = {isa = PBXBuildFile; fileRef = CE0180E026049CB6004095EA /* PlayerDesign.md */; };
+		CE0180E62604AA2B004095EA /* PlayerSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0180E52604AA2B004095EA /* PlayerSize.swift */; };
 		CE159AEA25EC7A420025292E /* NavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159AE925EC7A420025292E /* NavigationMap.swift */; };
 		CE159AF325EC7AA80025292E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159AF225EC7AA80025292E /* UserViewController.swift */; };
 		CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */; };
@@ -41,6 +43,9 @@
 		CEED6ED725CD0D2B008F8305 /* ZJYPhotoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */; };
 		CEED6EE225CD2D1D008F8305 /* UILabelPadding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6EE125CD2D1D008F8305 /* UILabelPadding2.swift */; };
 		CEED6F2D25CD3DE8008F8305 /* UILabelPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6F2C25CD3DE8008F8305 /* UILabelPadding.swift */; };
+		CEF0934125FB1584007242F7 /* ProgrammaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934025FB1584007242F7 /* ProgrammaListViewController.swift */; };
+		CEF0934925FB15BD007242F7 /* GenericsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934825FB15BD007242F7 /* GenericsViewController.swift */; };
+		CEF0934E25FB18BC007242F7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934D25FB18BC007242F7 /* BaseViewController.swift */; };
 		CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAE90225B924CF0049C040 /* PopPickerView.swift */; };
 		F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B16CC25AB6A620045D926 /* CustomSlider.swift */; };
 		F2E3148125CD7C7E000004E8 /* ZJYPhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3148025CD7C7E000004E8 /* ZJYPhotoCollectionView.swift */; };
@@ -76,6 +81,8 @@
 /* Begin PBXFileReference section */
 		0FFE6ABAFEDEFA5A85B6FE7E /* Pods-Utils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.release.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.release.xcconfig"; sourceTree = "<group>"; };
 		2326E16D412D44349106B0C4 /* Pods_Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0180E026049CB6004095EA /* PlayerDesign.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = PlayerDesign.md; sourceTree = "<group>"; };
+		CE0180E52604AA2B004095EA /* PlayerSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSize.swift; sourceTree = "<group>"; };
 		CE159AE925EC7A420025292E /* NavigationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMap.swift; sourceTree = "<group>"; };
 		CE159AF225EC7AA80025292E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYGuideMaskView.swift; sourceTree = "<group>"; };
@@ -109,6 +116,9 @@
 		CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoScrollView.swift; sourceTree = "<group>"; };
 		CEED6EE125CD2D1D008F8305 /* UILabelPadding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelPadding2.swift; sourceTree = "<group>"; };
 		CEED6F2C25CD3DE8008F8305 /* UILabelPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelPadding.swift; sourceTree = "<group>"; };
+		CEF0934025FB1584007242F7 /* ProgrammaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaListViewController.swift; sourceTree = "<group>"; };
+		CEF0934825FB15BD007242F7 /* GenericsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsViewController.swift; sourceTree = "<group>"; };
+		CEF0934D25FB18BC007242F7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CEFAE90225B924CF0049C040 /* PopPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopPickerView.swift; sourceTree = "<group>"; };
 		D6EE8A61890453FB4EB890A2 /* Pods-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.debug.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		F22B16CC25AB6A620045D926 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
@@ -285,7 +295,9 @@
 		CEBC013625F5FAB90063EF3A /* VLCPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				CE0180E026049CB6004095EA /* PlayerDesign.md */,
 				CEBC013725F5FAE10063EF3A /* VLCPlayerViewController.swift */,
+				CE0180E52604AA2B004095EA /* PlayerSize.swift */,
 			);
 			path = VLCPlayer;
 			sourceTree = "<group>";
@@ -301,6 +313,15 @@
 				CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */,
 			);
 			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		CEF0933F25FB1553007242F7 /* Programma */ = {
+			isa = PBXGroup;
+			children = (
+				CEF0934025FB1584007242F7 /* ProgrammaListViewController.swift */,
+				CEF0934825FB15BD007242F7 /* GenericsViewController.swift */,
+			);
+			path = Programma;
 			sourceTree = "<group>";
 		};
 		CEFAE90125B914B30049C040 /* PickerView */ = {
@@ -339,9 +360,11 @@
 				F2F31200258DC1FB00CBA614 /* AppDelegate.swift */,
 				F2F31202258DC1FB00CBA614 /* SceneDelegate.swift */,
 				F2F31204258DC1FB00CBA614 /* ViewController.swift */,
+				CEF0934D25FB18BC007242F7 /* BaseViewController.swift */,
 				CE8919C825B5313B003B286E /* ListTableViewController.swift */,
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
+				CEF0933F25FB1553007242F7 /* Programma */,
 				CE159AE825EC7A350025292E /* Navigator */,
 				CE8919E025B535C3003B286E /* Extension */,
 				CEBC013525F5FAB90063EF3A /* VLC */,
@@ -494,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F3120D258DC1FC00CBA614 /* LaunchScreen.storyboard in Resources */,
+				CE0180E126049CB6004095EA /* PlayerDesign.md in Resources */,
 				F2F3120A258DC1FC00CBA614 /* Assets.xcassets in Resources */,
 				F2F31208258DC1FB00CBA614 /* Main.storyboard in Resources */,
 			);
@@ -570,10 +594,12 @@
 				CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */,
 				CEB6E3B725ECC7750014AD11 /* GitHub.swift in Sources */,
 				CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */,
+				CEF0934925FB15BD007242F7 /* GenericsViewController.swift in Sources */,
 				CE8919E225B535C9003B286E /* UIView+Identifier.swift in Sources */,
 				CEDAF0BE25F8B01000D7DE4C /* NavigationEnum.swift in Sources */,
 				CE159AEA25EC7A420025292E /* NavigationMap.swift in Sources */,
 				F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */,
+				CEF0934E25FB18BC007242F7 /* BaseViewController.swift in Sources */,
 				CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */,
 				CEB6E3B125ECC71D0014AD11 /* Repo.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,
@@ -599,8 +625,10 @@
 				CEBC013825F5FAE10063EF3A /* VLCPlayerViewController.swift in Sources */,
 				CEB6E3BF25ECC7850014AD11 /* HTTP.swift in Sources */,
 				CE891A5025B57EE4003B286E /* SheetStyle.swift in Sources */,
+				CE0180E62604AA2B004095EA /* PlayerSize.swift in Sources */,
 				CE159AF325EC7AA80025292E /* UserViewController.swift in Sources */,
 				CE891A4325B5742C003B286E /* ZJYSize.swift in Sources */,
+				CEF0934125FB1584007242F7 /* ProgrammaListViewController.swift in Sources */,
 				CE8919CA25B5313B003B286E /* ListTableViewController.swift in Sources */,
 				CE8919EF25B5365A003B286E /* UINib+Extension.swift in Sources */,
 			);

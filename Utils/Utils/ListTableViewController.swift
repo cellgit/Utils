@@ -72,6 +72,9 @@ class ListTableViewController: UITableViewController {
         case ExampleEnum.vlcPlayer.rawValue:
             let vc = VLCPlayerViewController.init()
             self.navigationController?.pushViewController(vc, animated: true)
+        case ExampleEnum.programma.rawValue:
+            let vc = ProgrammaListViewController.init()
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

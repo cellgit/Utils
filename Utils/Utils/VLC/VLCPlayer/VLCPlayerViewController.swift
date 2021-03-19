@@ -14,7 +14,7 @@ class VLCPlayerViewController: UIViewController {
     let player = VLCMediaPlayer.init(options: nil)
     
     
-    let audioPlayer = VLCAudio.init()
+//    let audioPlayer = VLCAudio.init()
     
 
     override func viewDidLoad() {
@@ -27,6 +27,9 @@ class VLCPlayerViewController: UIViewController {
     
 
     func initialUI() {
+        
+        
+        
         player?.drawable = view
         
         guard let url = URL.init(string: urlString) else { return }

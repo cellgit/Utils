@@ -71,9 +71,15 @@ class ListTableViewController: UITableViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         case ExampleEnum.vlcPlayer.rawValue:
             let vc = VLCPlayerViewController.init()
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+//            self.navigationController?.pushViewController(vc, animated: true)
         case ExampleEnum.programma.rawValue:
             let vc = ProgrammaListViewController.init()
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        case ExampleEnum.webView.rawValue:
+            let vc = WebViewTestViewController.init()
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             break

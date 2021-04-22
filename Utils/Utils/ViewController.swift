@@ -69,6 +69,8 @@ class ViewController: UIViewController {
         initialSlider()
         
         initialPageTitle()
+        
+        initialBottomButton()
     }
     
     
@@ -78,9 +80,12 @@ class ViewController: UIViewController {
 extension ViewController: PagingTitleViewDelegate {
     func initialPageTitle() {
         let titles = ["全部", "一年级", "二年级", "三年级", "四年级", "五年级", "六年级", "七年级", "八年级", "九年级", "高一", "高二", "高三"]
-        let titleView = PCoverTitleView.init(titles: titles)
-        view.addSubview(titleView)
+//        let titleView = PCoverTitleView.init(titles: titles)
         
+        let titleView = PCoverTitleView.init(titles: titles, UIColor.white, UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1), UIFont.systemFont(ofSize: 12), 15)
+        view.addSubview(titleView)
+        titleView.tintColor = .white
+        titleView.backgroundColor = .white
         titleView.snp.makeConstraints {
             $0.left.equalTo(self.view).offset(20)
             $0.right.equalTo(self.view).offset(-20)
@@ -90,6 +95,23 @@ extension ViewController: PagingTitleViewDelegate {
     }
     
 }
+
+
+extension ViewController {
+    func initialBottomButton() {
+        let mainColor = UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1)
+        let bottomButtonView = BottomSingleButtonView.init(title: "再改一篇", font: UIFont.systemFont(ofSize: 15), titleColor: mainColor, buttonBackgroundColor: .white, cornerRadius: 2, borderWidth: 0.5, borderColor: mainColor)
+        view.addSubview(bottomButtonView)
+        
+        bottomButtonView.snp.makeConstraints {
+            $0.left.right.bottom.equalToSuperview()
+            $0.height.equalTo(isFullScreen ? (140 + 34) : 140)
+        }
+    }
+}
+
+
+
 
 
 

@@ -41,25 +41,43 @@ class PCoverTitleView: UIView, PagingTitleViewDelegate {
     
     private var pagingTitleView: PagingTitleView!
     
-    init(titles: [String] = []) {
+    init(titles: [String] = [],
+         _ indicatorColor: UIColor = UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1),
+         _ normalTitleColor: UIColor = .lightGray,
+         _ selectedTitleColor: UIColor = .white,
+         _ font: UIFont = UIFont.systemFont(ofSize: 12),
+         _ selectedFont: UIFont = UIFont.systemFont(ofSize: 15),
+         _ additionalWidth: CGFloat = 32
+    ) {
         super.init(frame: .zero)
-        initial(titles: titles)
+            initial(titles: titles, indicatorColor, normalTitleColor, selectedTitleColor, font, selectedFont, additionalWidth)
+        
+        
     }
     
-    func initial(titles: [String]) {
+    func initial(titles: [String],
+                 _ indicatorColor: UIColor = UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1),
+                 _ normalTitleColor: UIColor = .lightGray,
+                 _ selectedTitleColor: UIColor = .white,
+                 _ font: UIFont = UIFont.systemFont(ofSize: 12),
+                 _ selectedFont: UIFont = UIFont.systemFont(ofSize: 15),
+                 _ additionalWidth: CGFloat = 32
+                 ) {
         let configure: PagingTitleViewConfigure = PagingTitleViewConfigure()
         configure.indicatorType = .Cover
-        configure.indicatorColor = UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1)
+        configure.indicatorColor = indicatorColor //UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1)
         configure.indicatorHeight = 28
         configure.indicatorCornerRadius = 14
         configure.indicatorAdditionalWidth = 28
-        configure.additionalWidth = 32
-        configure.selectedColor = .white
-        configure.font = UIFont.systemFont(ofSize: 12)
-        
+        configure.additionalWidth = additionalWidth
+        configure.selectedColor = selectedTitleColor//.white
+        configure.color = normalTitleColor
+        configure.font = font//UIFont.systemFont(ofSize: 12)
+        configure.selectedFont = selectedFont
+        configure.showBottomSeparator = false
         pagingTitleView = PagingTitleView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH-40, height: 44), titles: titles, delegate: self, configure: configure)
         self.addSubview(pagingTitleView)
-        pagingTitleView.backgroundColor = .systemTeal
+//        pagingTitleView.backgroundColor = .systemTeal
     }
     
     func pagingTitleView(pagingTitleView: PagingTitleView, index: Int) {

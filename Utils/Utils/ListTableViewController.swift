@@ -70,9 +70,10 @@ class ListTableViewController: UITableViewController {
 //            self.present(vc, animated: true, completion: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         case ExampleEnum.vlcPlayer.rawValue:
-            let vc = VLCPlayerViewController.init()
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+            debugPrint("resultStr=====")
+//            let vc = VLCPlayerViewController.init()
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true, completion: nil)
 //            self.navigationController?.pushViewController(vc, animated: true)
         case ExampleEnum.programma.rawValue:
             let vc = ProgrammaListViewController.init()

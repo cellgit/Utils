@@ -16,6 +16,6 @@ pod 'Kingfisher', '~> 5.14.1'
 
 pod 'URLNavigator'
 
-pod 'MobileVLCKit'
+#pod 'MobileVLCKit'
 
 end

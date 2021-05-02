@@ -82,7 +82,9 @@ extension ViewController: PagingTitleViewDelegate {
         let titles = ["全部", "一年级", "二年级", "三年级", "四年级", "五年级", "六年级", "七年级", "八年级", "九年级", "高一", "高二", "高三"]
 //        let titleView = PCoverTitleView.init(titles: titles)
         
-        let titleView = PCoverTitleView.init(titles: titles, UIColor.white, UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1), UIFont.systemFont(ofSize: 12), 15)
+//        let titleView = PCoverTitleView.init(titles: titles, UIColor.white, UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1), UIFont.systemFont(ofSize: 12), 15)
+        
+        let titleView = PCoverTitleView.init(titles: titles, UIColor.white, UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1), UIColor(red: 0.073, green: 0.733, blue: 0.456, alpha: 1), UIFont.systemFont(ofSize: 12), UIFont.systemFont(ofSize: 12), 15)
         view.addSubview(titleView)
         titleView.tintColor = .white
         titleView.backgroundColor = .white

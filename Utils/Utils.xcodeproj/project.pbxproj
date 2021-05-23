@@ -12,6 +12,8 @@
 		CE0180E62604AA2B004095EA /* PlayerSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0180E52604AA2B004095EA /* PlayerSize.swift */; };
 		CE159AEA25EC7A420025292E /* NavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159AE925EC7A420025292E /* NavigationMap.swift */; };
 		CE159AF325EC7AA80025292E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE159AF225EC7AA80025292E /* UserViewController.swift */; };
+		CE4AEB1A26589871008AEABE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AEB1926589871008AEABE /* UIView+Extension.swift */; };
+		CE4AEB1F26589944008AEABE /* Zjy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AEB1E26589944008AEABE /* Zjy.swift */; };
 		CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */; };
 		CE7F9E7F262FF03E00F3C48C /* WebViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F9E7E262FF03E00F3C48C /* WebViewTestViewController.swift */; };
 		CE861539263170F400281D8B /* BottomSingleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE861538263170F400281D8B /* BottomSingleButtonView.swift */; };
@@ -52,6 +54,15 @@
 		CEF0934125FB1584007242F7 /* ProgrammaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934025FB1584007242F7 /* ProgrammaListViewController.swift */; };
 		CEF0934925FB15BD007242F7 /* GenericsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934825FB15BD007242F7 /* GenericsViewController.swift */; };
 		CEF0934E25FB18BC007242F7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934D25FB18BC007242F7 /* BaseViewController.swift */; };
+		CEF710EB265AA72900DCFDD9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF710EA265AA72900DCFDD9 /* TabBarViewController.swift */; };
+		CEF710F0265AA73500DCFDD9 /* LottieTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF710EF265AA73500DCFDD9 /* LottieTabBarViewController.swift */; };
+		CEF710F5265AA74100DCFDD9 /* UITabBar+Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF710F4265AA74100DCFDD9 /* UITabBar+Lottie.swift */; };
+		CEF710FF265AA76700DCFDD9 /* icon_book@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FA265AA76700DCFDD9 /* icon_book@2x.json */; };
+		CEF71100265AA76700DCFDD9 /* icon_ai@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FB265AA76700DCFDD9 /* icon_ai@2x.json */; };
+		CEF71101265AA76700DCFDD9 /* icon_work@2X.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FC265AA76700DCFDD9 /* icon_work@2X.json */; };
+		CEF71102265AA76700DCFDD9 /* icon_home@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FD265AA76700DCFDD9 /* icon_home@2x.json */; };
+		CEF71103265AA76700DCFDD9 /* icon_mine@2X.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FE265AA76700DCFDD9 /* icon_mine@2X.json */; };
+		CEF71119265AA93000DCFDD9 /* tab_me_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF71118265AA93000DCFDD9 /* tab_me_animate.json */; };
 		CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAE90225B924CF0049C040 /* PopPickerView.swift */; };
 		F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B16CC25AB6A620045D926 /* CustomSlider.swift */; };
 		F2E3148125CD7C7E000004E8 /* ZJYPhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3148025CD7C7E000004E8 /* ZJYPhotoCollectionView.swift */; };
@@ -91,6 +102,8 @@
 		CE0180E52604AA2B004095EA /* PlayerSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSize.swift; sourceTree = "<group>"; };
 		CE159AE925EC7A420025292E /* NavigationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMap.swift; sourceTree = "<group>"; };
 		CE159AF225EC7AA80025292E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		CE4AEB1926589871008AEABE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		CE4AEB1E26589944008AEABE /* Zjy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zjy.swift; sourceTree = "<group>"; };
 		CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYGuideMaskView.swift; sourceTree = "<group>"; };
 		CE7F9E7E262FF03E00F3C48C /* WebViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewTestViewController.swift; sourceTree = "<group>"; };
 		CE861538263170F400281D8B /* BottomSingleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSingleButtonView.swift; sourceTree = "<group>"; };
@@ -131,6 +144,15 @@
 		CEF0934025FB1584007242F7 /* ProgrammaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaListViewController.swift; sourceTree = "<group>"; };
 		CEF0934825FB15BD007242F7 /* GenericsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsViewController.swift; sourceTree = "<group>"; };
 		CEF0934D25FB18BC007242F7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CEF710EA265AA72900DCFDD9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CEF710EF265AA73500DCFDD9 /* LottieTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieTabBarViewController.swift; sourceTree = "<group>"; };
+		CEF710F4265AA74100DCFDD9 /* UITabBar+Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Lottie.swift"; sourceTree = "<group>"; };
+		CEF710FA265AA76700DCFDD9 /* icon_book@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_book@2x.json"; sourceTree = "<group>"; };
+		CEF710FB265AA76700DCFDD9 /* icon_ai@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_ai@2x.json"; sourceTree = "<group>"; };
+		CEF710FC265AA76700DCFDD9 /* icon_work@2X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_work@2X.json"; sourceTree = "<group>"; };
+		CEF710FD265AA76700DCFDD9 /* icon_home@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_home@2x.json"; sourceTree = "<group>"; };
+		CEF710FE265AA76700DCFDD9 /* icon_mine@2X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_mine@2X.json"; sourceTree = "<group>"; };
+		CEF71118265AA93000DCFDD9 /* tab_me_animate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tab_me_animate.json; sourceTree = "<group>"; };
 		CEFAE90225B924CF0049C040 /* PopPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopPickerView.swift; sourceTree = "<group>"; };
 		D6EE8A61890453FB4EB890A2 /* Pods-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.debug.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		F22B16CC25AB6A620045D926 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
@@ -239,12 +261,14 @@
 		CE8919E025B535C3003B286E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CE4AEB1E26589944008AEABE /* Zjy.swift */,
 				CE8919E125B535C9003B286E /* UIView+Identifier.swift */,
 				CE8919E925B535F9003B286E /* UITableView+Extension.swift */,
 				CE8919EE25B5365A003B286E /* UINib+Extension.swift */,
 				CE891A3325B56BB3003B286E /* UIButton+ClosureButton.swift */,
 				CE891A4225B5742C003B286E /* ZJYSize.swift */,
 				CE891A4725B5745E003B286E /* ZJYDevice.swift */,
+				CE4AEB1926589871008AEABE /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -348,6 +372,30 @@
 			path = Programma;
 			sourceTree = "<group>";
 		};
+		CEF710E9265AA70C00DCFDD9 /* LottieTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CEF710EA265AA72900DCFDD9 /* TabBarViewController.swift */,
+				CEF710EF265AA73500DCFDD9 /* LottieTabBarViewController.swift */,
+				CEF710F4265AA74100DCFDD9 /* UITabBar+Lottie.swift */,
+				CEF710F9265AA76700DCFDD9 /* tabbar_json */,
+			);
+			path = LottieTabBar;
+			sourceTree = "<group>";
+		};
+		CEF710F9265AA76700DCFDD9 /* tabbar_json */ = {
+			isa = PBXGroup;
+			children = (
+				CEF71118265AA93000DCFDD9 /* tab_me_animate.json */,
+				CEF710FA265AA76700DCFDD9 /* icon_book@2x.json */,
+				CEF710FB265AA76700DCFDD9 /* icon_ai@2x.json */,
+				CEF710FC265AA76700DCFDD9 /* icon_work@2X.json */,
+				CEF710FD265AA76700DCFDD9 /* icon_home@2x.json */,
+				CEF710FE265AA76700DCFDD9 /* icon_mine@2X.json */,
+			);
+			path = tabbar_json;
+			sourceTree = "<group>";
+		};
 		CEFAE90125B914B30049C040 /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,7 +436,11 @@
 				CE8919C825B5313B003B286E /* ListTableViewController.swift */,
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
+
 				CE7F9E7D262FF02400F3C48C /* WebView */,
+
+				CEF710E9265AA70C00DCFDD9 /* LottieTabBar */,
+
 				CEF0933F25FB1553007242F7 /* Programma */,
 				CE159AE825EC7A350025292E /* Navigator */,
 				CE8919E025B535C3003B286E /* Extension */,
@@ -445,6 +497,7 @@
 			buildConfigurationList = F2F31227258DC1FD00CBA614 /* Build configuration list for PBXNativeTarget "Utils" */;
 			buildPhases = (
 				AF33DCD4F283732A22DB2C2D /* [CP] Check Pods Manifest.lock */,
+				388E2F16A9C8EBB233F31409 /* [CP] Prepare Artifacts */,
 				F2F311F9258DC1FB00CBA614 /* Sources */,
 				F2F311FA258DC1FB00CBA614 /* Frameworks */,
 				F2F311FB258DC1FB00CBA614 /* Resources */,
@@ -542,8 +595,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF710FF265AA76700DCFDD9 /* icon_book@2x.json in Resources */,
+				CEF71100265AA76700DCFDD9 /* icon_ai@2x.json in Resources */,
 				F2F3120D258DC1FC00CBA614 /* LaunchScreen.storyboard in Resources */,
+				CEF71101265AA76700DCFDD9 /* icon_work@2X.json in Resources */,
+				CEF71102265AA76700DCFDD9 /* icon_home@2x.json in Resources */,
+				CEF71119265AA93000DCFDD9 /* tab_me_animate.json in Resources */,
 				CE0180E126049CB6004095EA /* PlayerDesign.md in Resources */,
+				CEF71103265AA76700DCFDD9 /* icon_mine@2X.json in Resources */,
 				F2F3120A258DC1FC00CBA614 /* Assets.xcassets in Resources */,
 				F2F31208258DC1FB00CBA614 /* Main.storyboard in Resources */,
 			);
@@ -581,6 +640,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		388E2F16A9C8EBB233F31409 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AF33DCD4F283732A22DB2C2D /* [CP] Check Pods Manifest.lock */ = {
@@ -622,19 +698,26 @@
 				CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */,
 				CEF0934925FB15BD007242F7 /* GenericsViewController.swift in Sources */,
 				CE8919E225B535C9003B286E /* UIView+Identifier.swift in Sources */,
+				CE4AEB1A26589871008AEABE /* UIView+Extension.swift in Sources */,
 				CEDAF0BE25F8B01000D7DE4C /* NavigationEnum.swift in Sources */,
 				CE159AEA25EC7A420025292E /* NavigationMap.swift in Sources */,
 				F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */,
 				CEF0934E25FB18BC007242F7 /* BaseViewController.swift in Sources */,
 				CEC76E9726083E4E00299E39 /* SWPlayerProtocol.swift in Sources */,
 				CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */,
+
 				CEC76E9C2608407D00299E39 /* PlayerDrawable.swift in Sources */,
+
+				CEF710EB265AA72900DCFDD9 /* TabBarViewController.swift in Sources */,
+
 				CEB6E3B125ECC71D0014AD11 /* Repo.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,
 				F2E3148125CD7C7E000004E8 /* ZJYPhotoCollectionView.swift in Sources */,
 				CEB6E38B25ECB8A50014AD11 /* UserCell.swift in Sources */,
 				CEED6ECF25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift in Sources */,
 				CE891A3425B56BB3003B286E /* UIButton+ClosureButton.swift in Sources */,
+				CE4AEB1F26589944008AEABE /* Zjy.swift in Sources */,
+				CEF710F5265AA74100DCFDD9 /* UITabBar+Lottie.swift in Sources */,
 				CEED6ED725CD0D2B008F8305 /* ZJYPhotoScrollView.swift in Sources */,
 				F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */,
 				CEC76EA6260872EB00299E39 /* SWPlayerControlView.swift in Sources */,
@@ -661,6 +744,7 @@
 				CE891A4325B5742C003B286E /* ZJYSize.swift in Sources */,
 				CEC76EA1260847F400299E39 /* SWDeviceOrientationProtocol.swift in Sources */,
 				CEF0934125FB1584007242F7 /* ProgrammaListViewController.swift in Sources */,
+				CEF710F0265AA73500DCFDD9 /* LottieTabBarViewController.swift in Sources */,
 				CE8919CA25B5313B003B286E /* ListTableViewController.swift in Sources */,
 				CE8919EF25B5365A003B286E /* UINib+Extension.swift in Sources */,
 			);

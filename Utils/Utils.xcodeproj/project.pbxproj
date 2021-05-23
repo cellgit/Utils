@@ -436,11 +436,8 @@
 				CE8919C825B5313B003B286E /* ListTableViewController.swift */,
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
-
 				CE7F9E7D262FF02400F3C48C /* WebView */,
-
 				CEF710E9265AA70C00DCFDD9 /* LottieTabBar */,
-
 				CEF0933F25FB1553007242F7 /* Programma */,
 				CE159AE825EC7A350025292E /* Navigator */,
 				CE8919E025B535C3003B286E /* Extension */,
@@ -497,7 +494,6 @@
 			buildConfigurationList = F2F31227258DC1FD00CBA614 /* Build configuration list for PBXNativeTarget "Utils" */;
 			buildPhases = (
 				AF33DCD4F283732A22DB2C2D /* [CP] Check Pods Manifest.lock */,
-				388E2F16A9C8EBB233F31409 /* [CP] Prepare Artifacts */,
 				F2F311F9258DC1FB00CBA614 /* Sources */,
 				F2F311FA258DC1FB00CBA614 /* Frameworks */,
 				F2F311FB258DC1FB00CBA614 /* Resources */,
@@ -642,23 +638,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		388E2F16A9C8EBB233F31409 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AF33DCD4F283732A22DB2C2D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -705,11 +684,8 @@
 				CEF0934E25FB18BC007242F7 /* BaseViewController.swift in Sources */,
 				CEC76E9726083E4E00299E39 /* SWPlayerProtocol.swift in Sources */,
 				CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */,
-
 				CEC76E9C2608407D00299E39 /* PlayerDrawable.swift in Sources */,
-
 				CEF710EB265AA72900DCFDD9 /* TabBarViewController.swift in Sources */,
-
 				CEB6E3B125ECC71D0014AD11 /* Repo.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,
 				F2E3148125CD7C7E000004E8 /* ZJYPhotoCollectionView.swift in Sources */,

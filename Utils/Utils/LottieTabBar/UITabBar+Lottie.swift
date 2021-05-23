@@ -11,6 +11,10 @@ import Lottie
 
 let LOTAnimationViewWidth: CGFloat = 30//35.0
 let LOTAnimationViewHeight: CGFloat = 30//35.0
+
+let LOTAnimationViewWidth2: CGFloat = 50
+let LOTAnimationViewHeight2: CGFloat = 50
+
 let RedPointViewWidthAndHeight: CGFloat = 8.0
 let RedPointLabelWidthAndHeight: CGFloat = 16.0
 
@@ -48,7 +52,7 @@ extension UITabBar {
         let y:CGFloat = 5.0
         
         if index == 2 {
-            lottieView.frame = CGRect(x: x-15, y: y-30, width: LOTAnimationViewWidth+30, height: LOTAnimationViewHeight+30)
+            lottieView.frame = CGRect(x: x-10, y: y-20, width: LOTAnimationViewWidth2, height: LOTAnimationViewHeight2)
         }
         else {
             lottieView.frame = CGRect(x: x, y: y, width: LOTAnimationViewWidth, height: LOTAnimationViewHeight)

@@ -65,6 +65,7 @@
 		CEF71119265AA93000DCFDD9 /* tab_me_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF71118265AA93000DCFDD9 /* tab_me_animate.json */; };
 		CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAE90225B924CF0049C040 /* PopPickerView.swift */; };
 		F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B16CC25AB6A620045D926 /* CustomSlider.swift */; };
+		F2D2B13F265E9A2B00229295 /* ZJAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2B13E265E9A2B00229295 /* ZJAlertController.swift */; };
 		F2E3148125CD7C7E000004E8 /* ZJYPhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3148025CD7C7E000004E8 /* ZJYPhotoCollectionView.swift */; };
 		F2E3148625CE87F5000004E8 /* ZJYPhotoBroswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E3148525CE87F5000004E8 /* ZJYPhotoBroswerView.swift */; };
 		F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F31200258DC1FB00CBA614 /* AppDelegate.swift */; };
@@ -156,6 +157,7 @@
 		CEFAE90225B924CF0049C040 /* PopPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopPickerView.swift; sourceTree = "<group>"; };
 		D6EE8A61890453FB4EB890A2 /* Pods-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.debug.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		F22B16CC25AB6A620045D926 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		F2D2B13E265E9A2B00229295 /* ZJAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJAlertController.swift; sourceTree = "<group>"; };
 		F2E3148025CD7C7E000004E8 /* ZJYPhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoCollectionView.swift; sourceTree = "<group>"; };
 		F2E3148525CE87F5000004E8 /* ZJYPhotoBroswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoBroswerView.swift; sourceTree = "<group>"; };
 		F2F311FD258DC1FB00CBA614 /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -404,6 +406,14 @@
 			path = PickerView;
 			sourceTree = "<group>";
 		};
+		F2D2B12D265E986200229295 /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2B13E265E9A2B00229295 /* ZJAlertController.swift */,
+			);
+			path = AlertViewController;
+			sourceTree = "<group>";
+		};
 		F2F311F4258DC1FB00CBA614 = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +446,7 @@
 				CE8919C825B5313B003B286E /* ListTableViewController.swift */,
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
+				F2D2B12D265E986200229295 /* AlertViewController */,
 				CE7F9E7D262FF02400F3C48C /* WebView */,
 				CEF710E9265AA70C00DCFDD9 /* LottieTabBar */,
 				CEF0933F25FB1553007242F7 /* Programma */,
@@ -701,6 +712,7 @@
 				CE891A1A25B55733003B286E /* SomeCustomView.swift in Sources */,
 				F2F31203258DC1FB00CBA614 /* SceneDelegate.swift in Sources */,
 				CE8919D025B531BF003B286E /* ExampleEnum.swift in Sources */,
+				F2D2B13F265E9A2B00229295 /* ZJAlertController.swift in Sources */,
 				F2F3123B258DC26800CBA614 /* LinedLabel.swift in Sources */,
 				CE861539263170F400281D8B /* BottomSingleButtonView.swift in Sources */,
 				CEB6E3AC25ECC6E40014AD11 /* RepoCell.swift in Sources */,

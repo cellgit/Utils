@@ -82,6 +82,14 @@ class ListTableViewController: UITableViewController {
         case ExampleEnum.webView.rawValue:
             let vc = WebViewTestViewController.init()
             self.navigationController?.pushViewController(vc, animated: true)
+            
+        case ExampleEnum.alertController.rawValue:
+            let alert = ZJAlertController.init()
+            let contentView = UIView.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 520))
+            contentView.backgroundColor = .white
+            alert.addContentView(contentView)
+            self.present(alert, animated: true, completion: nil)
+            
         default:
             break
         }

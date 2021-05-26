@@ -17,6 +17,8 @@ enum ExampleEnum: Int,CaseIterable {
     case vlcPlayer = 5
     case programma = 6
     case webView = 7
+    
+    case alertController = 8
 }
 
 

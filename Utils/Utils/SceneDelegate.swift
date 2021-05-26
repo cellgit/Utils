@@ -36,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .white
-        let nav = UINavigationController.init(rootViewController: TabBarViewController())
+        let nav = UINavigationController.init(rootViewController: ListTableViewController()) //TabBarViewController
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         

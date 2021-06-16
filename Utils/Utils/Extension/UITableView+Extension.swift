@@ -23,3 +23,18 @@ extension UITableView {
     }
 }
 
+extension UICollectionView {
+    
+    func register<T>(_ classType: T.Type) where T: UICollectionViewCell  {
+        register(classType, forCellWithReuseIdentifier: classType.identifier)
+    }
+    
+    func dequeueReusableCell<T>(_ classType: T.Type, _ indexPath: IndexPath) -> T where T: UICollectionViewCell {
+        return dequeueReusableCell(withReuseIdentifier: classType.identifier, for: indexPath) as! T
+    }
+    
+    func registerNib<T>(_ classType: T.Type) where T: UICollectionViewCell {
+        register(UINib.instance(classType), forCellWithReuseIdentifier: classType.identifier)
+    }
+}
+

@@ -89,9 +89,14 @@ class ListTableViewController: UITableViewController {
             contentView.backgroundColor = .white
             alert.addContentView(contentView)
             self.present(alert, animated: true, completion: nil)
+<<<<<<< HEAD
            
         case ExampleEnum.progress.rawValue:
             let vc = ProgressBarViewController.init()
+=======
+        case ExampleEnum.flowLayout.rawValue:
+            let vc = SWFlowLayoutViewController.init()
+>>>>>>> 5507e109468dc5a861f56ab78a382e0244b297ed
             self.navigationController?.pushViewController(vc, animated: true)
         default:
             break

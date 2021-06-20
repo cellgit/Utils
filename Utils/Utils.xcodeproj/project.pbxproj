@@ -256,6 +256,13 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		CE5CAD50267F6B7800575EE1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		CE7F9E7D262FF02400F3C48C /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,11 +488,9 @@
 				CE8919C825B5313B003B286E /* ListTableViewController.swift */,
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
-
+				CE5CAD50267F6B7800575EE1 /* TabBar */,
 				CEBDF7472667649F005BD4B4 /* ProgressBar */,
-
 				F2D2B2222678EBB600229295 /* FlowLayout */,
-
 				F2D2B12D265E986200229295 /* AlertViewController */,
 				CE7F9E7D262FF02400F3C48C /* WebView */,
 				CEF710E9265AA70C00DCFDD9 /* LottieTabBar */,

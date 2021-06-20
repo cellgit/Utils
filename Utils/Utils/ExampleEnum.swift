@@ -19,6 +19,9 @@ enum ExampleEnum: Int,CaseIterable {
     case webView = 7
     
     case alertController = 8
+    
+    case progress = 9
+    
 }
 
 

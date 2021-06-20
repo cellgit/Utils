@@ -41,11 +41,15 @@
 		CEB6E3B725ECC7750014AD11 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E3B625ECC7750014AD11 /* GitHub.swift */; };
 		CEB6E3BF25ECC7850014AD11 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E3BE25ECC7850014AD11 /* HTTP.swift */; };
 		CEBC013825F5FAE10063EF3A /* VLCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC013725F5FAE10063EF3A /* VLCPlayerViewController.swift */; };
+		CEBDF74B266764C5005BD4B4 /* OProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDF748266764C4005BD4B4 /* OProgressView.swift */; };
+		CEBDF74D266764C5005BD4B4 /* OProgressView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDF74A266764C5005BD4B4 /* OProgressView2.swift */; };
+		CEBDF75226676508005BD4B4 /* ProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDF75126676508005BD4B4 /* ProgressBarViewController.swift */; };
 		CEC76E9726083E4E00299E39 /* SWPlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC76E9626083E4E00299E39 /* SWPlayerProtocol.swift */; };
 		CEC76E9C2608407D00299E39 /* PlayerDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC76E9B2608407D00299E39 /* PlayerDrawable.swift */; };
 		CEC76EA1260847F400299E39 /* SWDeviceOrientationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC76EA0260847F400299E39 /* SWDeviceOrientationProtocol.swift */; };
 		CEC76EA6260872EB00299E39 /* SWPlayerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC76EA5260872EB00299E39 /* SWPlayerControlView.swift */; };
 		CEDAF0BE25F8B01000D7DE4C /* NavigationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAF0BD25F8B01000D7DE4C /* NavigationEnum.swift */; };
+		CEDDAA132668F71F0023E967 /* OProgressView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDDAA122668F71F0023E967 /* OProgressView3.swift */; };
 		CEED6EAA25CCD41F008F8305 /* PhotoBroswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6EA925CCD41F008F8305 /* PhotoBroswerViewController.swift */; };
 		CEED6ECF25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */; };
 		CEED6ED725CD0D2B008F8305 /* ZJYPhotoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */; };
@@ -132,11 +136,15 @@
 		CEB6E3B625ECC7750014AD11 /* GitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		CEB6E3BE25ECC7850014AD11 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		CEBC013725F5FAE10063EF3A /* VLCPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLCPlayerViewController.swift; sourceTree = "<group>"; };
+		CEBDF748266764C4005BD4B4 /* OProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OProgressView.swift; sourceTree = "<group>"; };
+		CEBDF74A266764C5005BD4B4 /* OProgressView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OProgressView2.swift; sourceTree = "<group>"; };
+		CEBDF75126676508005BD4B4 /* ProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarViewController.swift; sourceTree = "<group>"; };
 		CEC76E9626083E4E00299E39 /* SWPlayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlayerProtocol.swift; sourceTree = "<group>"; };
 		CEC76E9B2608407D00299E39 /* PlayerDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDrawable.swift; sourceTree = "<group>"; };
 		CEC76EA0260847F400299E39 /* SWDeviceOrientationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDeviceOrientationProtocol.swift; sourceTree = "<group>"; };
 		CEC76EA5260872EB00299E39 /* SWPlayerControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPlayerControlView.swift; sourceTree = "<group>"; };
 		CEDAF0BD25F8B01000D7DE4C /* NavigationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationEnum.swift; sourceTree = "<group>"; };
+		CEDDAA122668F71F0023E967 /* OProgressView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OProgressView3.swift; sourceTree = "<group>"; };
 		CEED6EA925CCD41F008F8305 /* PhotoBroswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBroswerViewController.swift; sourceTree = "<group>"; };
 		CEED6ECE25CCEFE3008F8305 /* ZJYPhotoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoCollectionCell.swift; sourceTree = "<group>"; };
 		CEED6ED625CD0D2B008F8305 /* ZJYPhotoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYPhotoScrollView.swift; sourceTree = "<group>"; };
@@ -352,6 +360,17 @@
 			path = VLCPlayer;
 			sourceTree = "<group>";
 		};
+		CEBDF7472667649F005BD4B4 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				CEBDF748266764C4005BD4B4 /* OProgressView.swift */,
+				CEBDF74A266764C5005BD4B4 /* OProgressView2.swift */,
+				CEDDAA122668F71F0023E967 /* OProgressView3.swift */,
+				CEBDF75126676508005BD4B4 /* ProgressBarViewController.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
 		CEED6EA825CCD3DA008F8305 /* PhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +465,7 @@
 				CE8919C825B5313B003B286E /* ListTableViewController.swift */,
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
+				CEBDF7472667649F005BD4B4 /* ProgressBar */,
 				F2D2B12D265E986200229295 /* AlertViewController */,
 				CE7F9E7D262FF02400F3C48C /* WebView */,
 				CEF710E9265AA70C00DCFDD9 /* LottieTabBar */,
@@ -683,10 +703,12 @@
 				CEED6EAA25CCD41F008F8305 /* PhotoBroswerViewController.swift in Sources */,
 				CE891A2725B56A56003B286E /* SheetListTableViewController.swift in Sources */,
 				CEED6F2D25CD3DE8008F8305 /* UILabelPadding.swift in Sources */,
+				CEDDAA132668F71F0023E967 /* OProgressView3.swift in Sources */,
 				CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */,
 				CEB6E3B725ECC7750014AD11 /* GitHub.swift in Sources */,
 				CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */,
 				CEF0934925FB15BD007242F7 /* GenericsViewController.swift in Sources */,
+				CEBDF75226676508005BD4B4 /* ProgressBarViewController.swift in Sources */,
 				CE8919E225B535C9003B286E /* UIView+Identifier.swift in Sources */,
 				CE4AEB1A26589871008AEABE /* UIView+Extension.swift in Sources */,
 				CEDAF0BE25F8B01000D7DE4C /* NavigationEnum.swift in Sources */,
@@ -711,6 +733,7 @@
 				CE8919D625B5330E003B286E /* AlertListTableViewController.swift in Sources */,
 				CE891A1A25B55733003B286E /* SomeCustomView.swift in Sources */,
 				F2F31203258DC1FB00CBA614 /* SceneDelegate.swift in Sources */,
+				CEBDF74B266764C5005BD4B4 /* OProgressView.swift in Sources */,
 				CE8919D025B531BF003B286E /* ExampleEnum.swift in Sources */,
 				F2D2B13F265E9A2B00229295 /* ZJAlertController.swift in Sources */,
 				F2F3123B258DC26800CBA614 /* LinedLabel.swift in Sources */,
@@ -720,6 +743,7 @@
 				CEB6E37C25ECB8100014AD11 /* UserListViewController.swift in Sources */,
 				CEB6E38225ECB84F0014AD11 /* User.swift in Sources */,
 				CEED6EE225CD2D1D008F8305 /* UILabelPadding2.swift in Sources */,
+				CEBDF74D266764C5005BD4B4 /* OProgressView2.swift in Sources */,
 				CE891A2125B55F19003B286E /* AlertStyleZeroViewController.swift in Sources */,
 				CE891A4825B5745E003B286E /* ZJYDevice.swift in Sources */,
 				CE891A3925B56E7E003B286E /* SheetAlertButton.swift in Sources */,

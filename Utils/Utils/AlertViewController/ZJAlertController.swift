@@ -81,7 +81,7 @@ extension ZJAlertController {
             self.view.backgroundColor = UIColor.init(white: 0, alpha: 0.6)
             self.contentView?.transform = CGAffineTransform(translationX: 0, y: -self.contentViewHeight)
             // 需要在动画完成进行设置圆角路径
-//            self.rectCorner(self.uid)
+            
         }, completion: nil)
     }
 

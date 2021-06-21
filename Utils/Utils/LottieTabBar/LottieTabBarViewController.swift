@@ -37,6 +37,25 @@ open class LottieTabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         delegate = self
+        
+        self.tabBar.backgroundColor = .white
+        //tabbar_bg_footer_container
+        tabBar.shadowImage = UIImage()
+        
+        
+        var selectionImage = UIImage(named:"tabbar_bg_footer_container")
+        let tabSize = CGSize(width: SCREEN_WIDTH, height: kTabBarHeight)
+        UIGraphicsBeginImageContext(tabSize)
+        selectionImage?.draw(in: CGRect(x: 0, y: 0, width: tabSize.width, height: tabSize.height))
+        selectionImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        tabBar.backgroundImage = selectionImage//UIImage.init(named: "tabbar_bg_footer_container")//UIImage()
+        
+        
+        tabBar.tintColor = UIColor.systemGreen //ThemeColor.main
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -72,6 +91,8 @@ extension LottieTabBarViewController: UITabBarControllerDelegate {
             } else {
                 lastSelectIndex = index
                 self.tabBar.animationLottieImage(index: index)
+                
+//                self.tabBar.withOutAnimationLottieImage(index: index)
             }
             lottieDelegate?.lottieTabBar(tabBar, didSelect: item, selectIndex: index)
         }

@@ -9,14 +9,20 @@ import Foundation
 import UIKit
 import Lottie
 
-let LOTAnimationViewWidth: CGFloat = 30//35.0
-let LOTAnimationViewHeight: CGFloat = 30//35.0
+let LOTAnimationViewWidth: CGFloat = 25//35.0
+let LOTAnimationViewHeight: CGFloat = 25//35.0
 
-let LOTAnimationViewWidth2: CGFloat = 50
-let LOTAnimationViewHeight2: CGFloat = 50
+let LOTAnimationViewWidth2: CGFloat = 50//35.0
+let LOTAnimationViewHeight2: CGFloat = 50//35.0
+
+
 
 let RedPointViewWidthAndHeight: CGFloat = 8.0
 let RedPointLabelWidthAndHeight: CGFloat = 16.0
+
+
+var kCenterTabBarView: UIView?
+
 
 extension UITabBar {
 
@@ -43,18 +49,24 @@ extension UITabBar {
             }
         }
     }
+    
+    
 
     private func addLottieImageInMainThread(index: Int, lottieName: String) {
         let lottieView = LOTAnimationView(name: lottieName)
         let totalW = UIScreen.main.bounds.size.width
         let singleW = totalW / CGFloat(self.items?.count ?? 1)
-        let x = ceil(CGFloat(index) * singleW + (singleW - LOTAnimationViewWidth) / 2.0)
         let y:CGFloat = 5.0
         
         if index == 2 {
-            lottieView.frame = CGRect(x: x-10, y: y-20, width: LOTAnimationViewWidth2, height: LOTAnimationViewHeight2)
+            let x2 = ceil(CGFloat(index) * singleW + (singleW - LOTAnimationViewWidth2) / 2.0)
+            lottieView.frame = CGRect(x: x2, y: y-30, width: LOTAnimationViewWidth2, height: LOTAnimationViewHeight2)
+            lottieView.zjy.shadow()
+            
+            kCenterTabBarView = lottieView
         }
         else {
+            let x = ceil(CGFloat(index) * singleW + (singleW - LOTAnimationViewWidth) / 2.0)
             lottieView.frame = CGRect(x: x, y: y, width: LOTAnimationViewWidth, height: LOTAnimationViewHeight)
         }
         
@@ -65,6 +77,9 @@ extension UITabBar {
         lottieView.tag = 1000 + index;
         self.addSubview(lottieView)
     }
+    
+    
+    
 
     private func addRedPointViewInMainThread(index: Int) {
         let redView = UIView()
@@ -125,9 +140,12 @@ extension UITabBar {
         for _ in items {
             if let lottieView = self.viewWithTag(1000 + i) as? LOTAnimationView {
                 if UITabBar.lastTag == 1000 + i {
-                    lottieView.play(fromProgress: 1.0, toProgress: 0.0) { _ in
-                        lottieView.stop()
-                    }
+                    // 这个会同时动画上一次选中的
+//                    lottieView.play(fromProgress: 1.0, toProgress: 0.0) { _ in
+//                        lottieView.stop()
+//                    }
+                    
+                    lottieView.stop()
                 } else {
                     lottieView.stop()
                 }
@@ -135,4 +153,58 @@ extension UITabBar {
             i += 1
         }
     }
+    
+//    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+//
+//        if self.isHidden {
+//            return super.hitTest(point, with: event)
+//        }
+//        else {
+//            if let tempPoint = kCenterTabBarView?.convert(point, to: self),
+//               kCenterTabBarView?.bounds.contains(tempPoint) == true {
+//                return kCenterTabBarView
+//
+//            }
+//            else {
+//                return super.hitTest(point, with: event)
+//            }
+//        }
+//    }
+    
+    
 }
+
+
+extension LOTAnimationView {
+    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        
+        if self.isHidden {
+            return super.hitTest(point, with: event)
+        }
+        else {
+            if let tempPoint = kCenterTabBarView?.convert(point, to: self),
+               kCenterTabBarView?.bounds.contains(tempPoint) == true {
+                return kCenterTabBarView
+                
+            }
+            else {
+                return super.hitTest(point, with: event)
+            }
+        }
+    }
+}
+
+
+//        if (self.hidden){ //如果tabbar隐藏了，那么直接执行系统方法
+//            return [super hitTest:point withEvent:event];
+//        }else {
+//            //转换坐标
+//            CGPoint tempPoint = [self.centerBtn convertPoint:point fromView:self];
+//            //判断点击的点是否在按钮区域内
+//            if (CGRectContainsPoint(self.centerBtn.bounds, tempPoint)){
+//                //返回按钮
+//                return _centerBtn;
+//            }else {
+//                return [super hitTest:point withEvent:event];
+//            }
+//        }

@@ -15,6 +15,16 @@
 		CE4AEB1A26589871008AEABE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AEB1926589871008AEABE /* UIView+Extension.swift */; };
 		CE4AEB1F26589944008AEABE /* Zjy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AEB1E26589944008AEABE /* Zjy.swift */; };
 		CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */; };
+		CE5CAD90267F991900575EE1 /* icon_book@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5CAD8B267F991900575EE1 /* icon_book@2x.json */; };
+		CE5CAD91267F991900575EE1 /* icon_ai@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5CAD8C267F991900575EE1 /* icon_ai@2x.json */; };
+		CE5CAD92267F991900575EE1 /* icon_work@2X.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5CAD8D267F991900575EE1 /* icon_work@2X.json */; };
+		CE5CAD93267F991900575EE1 /* icon_home@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5CAD8E267F991900575EE1 /* icon_home@2x.json */; };
+		CE5CAD94267F991900575EE1 /* icon_mine@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5CAD8F267F991900575EE1 /* icon_mine@2x.json */; };
+		CE5CAD9F267F999300575EE1 /* LottieTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CAD9C267F999300575EE1 /* LottieTabBarViewController.swift */; };
+		CE5CADA0267F999300575EE1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CAD9D267F999300575EE1 /* TabBarViewController.swift */; };
+		CE5CADA1267F999300575EE1 /* UITabBar+Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CAD9E267F999300575EE1 /* UITabBar+Lottie.swift */; };
+		CE5CADBC267FAC9A00575EE1 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CADBB267FAC9A00575EE1 /* MainTabBarViewController.swift */; };
+		CE5CADC4267FAE9900575EE1 /* CYLPlusButtonSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CADC3267FAE9900575EE1 /* CYLPlusButtonSubclass.swift */; };
 		CE7F9E7F262FF03E00F3C48C /* WebViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F9E7E262FF03E00F3C48C /* WebViewTestViewController.swift */; };
 		CE861539263170F400281D8B /* BottomSingleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE861538263170F400281D8B /* BottomSingleButtonView.swift */; };
 		CE8919CA25B5313B003B286E /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8919C825B5313B003B286E /* ListTableViewController.swift */; };
@@ -58,15 +68,6 @@
 		CEF0934125FB1584007242F7 /* ProgrammaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934025FB1584007242F7 /* ProgrammaListViewController.swift */; };
 		CEF0934925FB15BD007242F7 /* GenericsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934825FB15BD007242F7 /* GenericsViewController.swift */; };
 		CEF0934E25FB18BC007242F7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF0934D25FB18BC007242F7 /* BaseViewController.swift */; };
-		CEF710EB265AA72900DCFDD9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF710EA265AA72900DCFDD9 /* TabBarViewController.swift */; };
-		CEF710F0265AA73500DCFDD9 /* LottieTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF710EF265AA73500DCFDD9 /* LottieTabBarViewController.swift */; };
-		CEF710F5265AA74100DCFDD9 /* UITabBar+Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF710F4265AA74100DCFDD9 /* UITabBar+Lottie.swift */; };
-		CEF710FF265AA76700DCFDD9 /* icon_book@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FA265AA76700DCFDD9 /* icon_book@2x.json */; };
-		CEF71100265AA76700DCFDD9 /* icon_ai@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FB265AA76700DCFDD9 /* icon_ai@2x.json */; };
-		CEF71101265AA76700DCFDD9 /* icon_work@2X.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FC265AA76700DCFDD9 /* icon_work@2X.json */; };
-		CEF71102265AA76700DCFDD9 /* icon_home@2x.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FD265AA76700DCFDD9 /* icon_home@2x.json */; };
-		CEF71103265AA76700DCFDD9 /* icon_mine@2X.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF710FE265AA76700DCFDD9 /* icon_mine@2X.json */; };
-		CEF71119265AA93000DCFDD9 /* tab_me_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF71118265AA93000DCFDD9 /* tab_me_animate.json */; };
 		CEFAE90325B924CF0049C040 /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAE90225B924CF0049C040 /* PopPickerView.swift */; };
 		F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B16CC25AB6A620045D926 /* CustomSlider.swift */; };
 		F2D2B13F265E9A2B00229295 /* ZJAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2B13E265E9A2B00229295 /* ZJAlertController.swift */; };
@@ -113,6 +114,16 @@
 		CE4AEB1926589871008AEABE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		CE4AEB1E26589944008AEABE /* Zjy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zjy.swift; sourceTree = "<group>"; };
 		CE53C31225CF782A00A90AA1 /* ZJYGuideMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYGuideMaskView.swift; sourceTree = "<group>"; };
+		CE5CAD8B267F991900575EE1 /* icon_book@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_book@2x.json"; sourceTree = "<group>"; };
+		CE5CAD8C267F991900575EE1 /* icon_ai@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_ai@2x.json"; sourceTree = "<group>"; };
+		CE5CAD8D267F991900575EE1 /* icon_work@2X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_work@2X.json"; sourceTree = "<group>"; };
+		CE5CAD8E267F991900575EE1 /* icon_home@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_home@2x.json"; sourceTree = "<group>"; };
+		CE5CAD8F267F991900575EE1 /* icon_mine@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_mine@2x.json"; sourceTree = "<group>"; };
+		CE5CAD9C267F999300575EE1 /* LottieTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieTabBarViewController.swift; sourceTree = "<group>"; };
+		CE5CAD9D267F999300575EE1 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE5CAD9E267F999300575EE1 /* UITabBar+Lottie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+Lottie.swift"; sourceTree = "<group>"; };
+		CE5CADBB267FAC9A00575EE1 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		CE5CADC3267FAE9900575EE1 /* CYLPlusButtonSubclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYLPlusButtonSubclass.swift; sourceTree = "<group>"; };
 		CE7F9E7E262FF03E00F3C48C /* WebViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewTestViewController.swift; sourceTree = "<group>"; };
 		CE861538263170F400281D8B /* BottomSingleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSingleButtonView.swift; sourceTree = "<group>"; };
 		CE8919C825B5313B003B286E /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
@@ -156,15 +167,6 @@
 		CEF0934025FB1584007242F7 /* ProgrammaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaListViewController.swift; sourceTree = "<group>"; };
 		CEF0934825FB15BD007242F7 /* GenericsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsViewController.swift; sourceTree = "<group>"; };
 		CEF0934D25FB18BC007242F7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		CEF710EA265AA72900DCFDD9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		CEF710EF265AA73500DCFDD9 /* LottieTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieTabBarViewController.swift; sourceTree = "<group>"; };
-		CEF710F4265AA74100DCFDD9 /* UITabBar+Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+Lottie.swift"; sourceTree = "<group>"; };
-		CEF710FA265AA76700DCFDD9 /* icon_book@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_book@2x.json"; sourceTree = "<group>"; };
-		CEF710FB265AA76700DCFDD9 /* icon_ai@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_ai@2x.json"; sourceTree = "<group>"; };
-		CEF710FC265AA76700DCFDD9 /* icon_work@2X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_work@2X.json"; sourceTree = "<group>"; };
-		CEF710FD265AA76700DCFDD9 /* icon_home@2x.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_home@2x.json"; sourceTree = "<group>"; };
-		CEF710FE265AA76700DCFDD9 /* icon_mine@2X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "icon_mine@2X.json"; sourceTree = "<group>"; };
-		CEF71118265AA93000DCFDD9 /* tab_me_animate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tab_me_animate.json; sourceTree = "<group>"; };
 		CEFAE90225B924CF0049C040 /* PopPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopPickerView.swift; sourceTree = "<group>"; };
 		D6EE8A61890453FB4EB890A2 /* Pods-Utils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Utils.debug.xcconfig"; path = "Target Support Files/Pods-Utils/Pods-Utils.debug.xcconfig"; sourceTree = "<group>"; };
 		F22B16CC25AB6A620045D926 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
@@ -256,11 +258,29 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
-		CE5CAD50267F6B7800575EE1 /* TabBar */ = {
+		CE5CAD8A267F991900575EE1 /* tabbar-json */ = {
 			isa = PBXGroup;
 			children = (
+				CE5CAD8B267F991900575EE1 /* icon_book@2x.json */,
+				CE5CAD8C267F991900575EE1 /* icon_ai@2x.json */,
+				CE5CAD8D267F991900575EE1 /* icon_work@2X.json */,
+				CE5CAD8E267F991900575EE1 /* icon_home@2x.json */,
+				CE5CAD8F267F991900575EE1 /* icon_mine@2x.json */,
 			);
-			path = TabBar;
+			path = "tabbar-json";
+			sourceTree = "<group>";
+		};
+		CE5CAD9B267F999300575EE1 /* LottieTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE5CAD8A267F991900575EE1 /* tabbar-json */,
+				CE5CAD9C267F999300575EE1 /* LottieTabBarViewController.swift */,
+				CE5CAD9D267F999300575EE1 /* TabBarViewController.swift */,
+				CE5CAD9E267F999300575EE1 /* UITabBar+Lottie.swift */,
+				CE5CADBB267FAC9A00575EE1 /* MainTabBarViewController.swift */,
+				CE5CADC3267FAE9900575EE1 /* CYLPlusButtonSubclass.swift */,
+			);
+			path = LottieTabBar;
 			sourceTree = "<group>";
 		};
 		CE7F9E7D262FF02400F3C48C /* WebView */ = {
@@ -409,25 +429,8 @@
 		CEF710E9265AA70C00DCFDD9 /* LottieTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				CEF710EA265AA72900DCFDD9 /* TabBarViewController.swift */,
-				CEF710EF265AA73500DCFDD9 /* LottieTabBarViewController.swift */,
-				CEF710F4265AA74100DCFDD9 /* UITabBar+Lottie.swift */,
-				CEF710F9265AA76700DCFDD9 /* tabbar_json */,
 			);
 			path = LottieTabBar;
-			sourceTree = "<group>";
-		};
-		CEF710F9265AA76700DCFDD9 /* tabbar_json */ = {
-			isa = PBXGroup;
-			children = (
-				CEF71118265AA93000DCFDD9 /* tab_me_animate.json */,
-				CEF710FA265AA76700DCFDD9 /* icon_book@2x.json */,
-				CEF710FB265AA76700DCFDD9 /* icon_ai@2x.json */,
-				CEF710FC265AA76700DCFDD9 /* icon_work@2X.json */,
-				CEF710FD265AA76700DCFDD9 /* icon_home@2x.json */,
-				CEF710FE265AA76700DCFDD9 /* icon_mine@2X.json */,
-			);
-			path = tabbar_json;
 			sourceTree = "<group>";
 		};
 		CEFAE90125B914B30049C040 /* PickerView */ = {
@@ -488,7 +491,7 @@
 				CE8919C825B5313B003B286E /* ListTableViewController.swift */,
 				CE8919CF25B531BF003B286E /* ExampleEnum.swift */,
 				F22B16CC25AB6A620045D926 /* CustomSlider.swift */,
-				CE5CAD50267F6B7800575EE1 /* TabBar */,
+				CE5CAD9B267F999300575EE1 /* LottieTabBar */,
 				CEBDF7472667649F005BD4B4 /* ProgressBar */,
 				F2D2B2222678EBB600229295 /* FlowLayout */,
 				F2D2B12D265E986200229295 /* AlertViewController */,
@@ -647,14 +650,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF710FF265AA76700DCFDD9 /* icon_book@2x.json in Resources */,
-				CEF71100265AA76700DCFDD9 /* icon_ai@2x.json in Resources */,
+				CE5CAD90267F991900575EE1 /* icon_book@2x.json in Resources */,
+				CE5CAD91267F991900575EE1 /* icon_ai@2x.json in Resources */,
 				F2F3120D258DC1FC00CBA614 /* LaunchScreen.storyboard in Resources */,
-				CEF71101265AA76700DCFDD9 /* icon_work@2X.json in Resources */,
-				CEF71102265AA76700DCFDD9 /* icon_home@2x.json in Resources */,
-				CEF71119265AA93000DCFDD9 /* tab_me_animate.json in Resources */,
+				CE5CAD92267F991900575EE1 /* icon_work@2X.json in Resources */,
+				CE5CAD93267F991900575EE1 /* icon_home@2x.json in Resources */,
 				CE0180E126049CB6004095EA /* PlayerDesign.md in Resources */,
-				CEF71103265AA76700DCFDD9 /* icon_mine@2X.json in Resources */,
+				CE5CAD94267F991900575EE1 /* icon_mine@2x.json in Resources */,
 				F2F3120A258DC1FC00CBA614 /* Assets.xcassets in Resources */,
 				F2F31208258DC1FB00CBA614 /* Main.storyboard in Resources */,
 			);
@@ -727,6 +729,7 @@
 				CEA6F2B225B7FEA700C91997 /* PCoverTitleView.swift in Sources */,
 				CEED6EAA25CCD41F008F8305 /* PhotoBroswerViewController.swift in Sources */,
 				CE891A2725B56A56003B286E /* SheetListTableViewController.swift in Sources */,
+				CE5CADA0267F999300575EE1 /* TabBarViewController.swift in Sources */,
 				CEED6F2D25CD3DE8008F8305 /* UILabelPadding.swift in Sources */,
 				CEDDAA132668F71F0023E967 /* OProgressView3.swift in Sources */,
 				CEAF979E259032C6007D6691 /* PriorityQueue.swift in Sources */,
@@ -741,9 +744,11 @@
 				F22B16CD25AB6A620045D926 /* CustomSlider.swift in Sources */,
 				CEF0934E25FB18BC007242F7 /* BaseViewController.swift in Sources */,
 				CEC76E9726083E4E00299E39 /* SWPlayerProtocol.swift in Sources */,
+				CE5CAD9F267F999300575EE1 /* LottieTabBarViewController.swift in Sources */,
+				CE5CADBC267FAC9A00575EE1 /* MainTabBarViewController.swift in Sources */,
 				CE53C31325CF782A00A90AA1 /* ZJYGuideMaskView.swift in Sources */,
 				CEC76E9C2608407D00299E39 /* PlayerDrawable.swift in Sources */,
-				CEF710EB265AA72900DCFDD9 /* TabBarViewController.swift in Sources */,
+				CE5CADA1267F999300575EE1 /* UITabBar+Lottie.swift in Sources */,
 				CEB6E3B125ECC71D0014AD11 /* Repo.swift in Sources */,
 				F2F31205258DC1FB00CBA614 /* ViewController.swift in Sources */,
 				F2E3148125CD7C7E000004E8 /* ZJYPhotoCollectionView.swift in Sources */,
@@ -753,8 +758,8 @@
 				CE891A3425B56BB3003B286E /* UIButton+ClosureButton.swift in Sources */,
 				F2D2B22C2678ED1100229295 /* CustomFlowLayout.swift in Sources */,
 				CE4AEB1F26589944008AEABE /* Zjy.swift in Sources */,
-				CEF710F5265AA74100DCFDD9 /* UITabBar+Lottie.swift in Sources */,
 				CEED6ED725CD0D2B008F8305 /* ZJYPhotoScrollView.swift in Sources */,
+				CE5CADC4267FAE9900575EE1 /* CYLPlusButtonSubclass.swift in Sources */,
 				F2F31201258DC1FB00CBA614 /* AppDelegate.swift in Sources */,
 				CEC76EA6260872EB00299E39 /* SWPlayerControlView.swift in Sources */,
 				CE8919D625B5330E003B286E /* AlertListTableViewController.swift in Sources */,
@@ -784,7 +789,6 @@
 				CE891A4325B5742C003B286E /* ZJYSize.swift in Sources */,
 				CEC76EA1260847F400299E39 /* SWDeviceOrientationProtocol.swift in Sources */,
 				CEF0934125FB1584007242F7 /* ProgrammaListViewController.swift in Sources */,
-				CEF710F0265AA73500DCFDD9 /* LottieTabBarViewController.swift in Sources */,
 				CE8919CA25B5313B003B286E /* ListTableViewController.swift in Sources */,
 				CE8919EF25B5365A003B286E /* UINib+Extension.swift in Sources */,
 			);

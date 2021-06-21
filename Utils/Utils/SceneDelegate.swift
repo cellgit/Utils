@@ -7,6 +7,7 @@
 
 import UIKit
 import URLNavigator
+import CYLTabBarController
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -36,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .white
-        let nav = UINavigationController.init(rootViewController: ListTableViewController()) //TabBarViewController
+        let nav = UINavigationController.init(rootViewController: TabBarViewController()) //TabBarViewController
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
@@ -75,5 +76,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+}
+
+
+extension SceneDelegate {
+    func viewControllers() -> [UINavigationController]{
+        let home = UINavigationController(rootViewController: ListTableViewController())
+        let connection = UINavigationController(rootViewController: ListTableViewController())
+        let message = UINavigationController(rootViewController: ListTableViewController())
+        let personal =   UINavigationController(rootViewController: ListTableViewController())
+        let viewControllers = [home, connection, message, personal]
+        
+        return viewControllers
+        
+    }
+    
+
+    func tabBarItemsAttributesForController() ->  [[String : String]] {
+        
+        let tabBarItemOne = [CYLTabBarItemTitle:"首页",
+                             CYLTabBarItemImage:"home_normal",
+                             CYLTabBarItemSelectedImage:"home_highlight"]
+        
+        let tabBarItemTwo = [CYLTabBarItemTitle:"同城",
+                             CYLTabBarItemImage:"mycity_normal",
+                             CYLTabBarItemSelectedImage:"mycity_highlight"]
+        
+        let tabBarItemThree = [CYLTabBarItemTitle:"消息",
+                               CYLTabBarItemImage:"message_normal",
+                               CYLTabBarItemSelectedImage:"message_highlight"]
+        
+        let tabBarItemFour = [CYLTabBarItemTitle:"我的",
+                              CYLTabBarItemImage:"account_normal",
+                              CYLTabBarItemSelectedImage:"account_highlight"]
+        let tabBarItemsAttributes = [tabBarItemOne,tabBarItemTwo,tabBarItemThree,tabBarItemFour]
+        return tabBarItemsAttributes
+    }
 }
 

@@ -20,4 +20,9 @@ pod 'URLNavigator'
 
 pod 'lottie-ios','~> 2.5.0'
 
+pod "ESTabBarController-swift"
+
+pod 'CYLTabBarController'
+
+
 end

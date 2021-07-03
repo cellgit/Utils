@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import Lottie
 
+import ESTabBarController_swift
+
 let LOTAnimationViewWidth: CGFloat = 25//35.0
 let LOTAnimationViewHeight: CGFloat = 25//35.0
 
@@ -23,6 +25,10 @@ let RedPointLabelWidthAndHeight: CGFloat = 16.0
 
 var kCenterTabBarView: UIView?
 
+
+class ESTabBar2: UITabBar {
+    //
+}
 
 extension UITabBar {
 
@@ -59,11 +65,25 @@ extension UITabBar {
         let y:CGFloat = 5.0
         
         if index == 2 {
-            let x2 = ceil(CGFloat(index) * singleW + (singleW - LOTAnimationViewWidth2) / 2.0)
-            lottieView.frame = CGRect(x: x2, y: y-30, width: LOTAnimationViewWidth2, height: LOTAnimationViewHeight2)
-            lottieView.zjy.shadow()
+//            let x2 = ceil(CGFloat(index) * singleW + (singleW - LOTAnimationViewWidth2) / 2.0)
+//            lottieView.frame = CGRect(x: x2, y: y-30, width: LOTAnimationViewWidth2, height: LOTAnimationViewHeight2)
+//            lottieView.zjy.shadow()
+            
+//            let tabbarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: "Home", image: UIImage(named: "icon_mine@3X_00001"), selectedImage: UIImage(named: "icon_mine@3X_00005"))
+//            self.items?[2] = tabbarItem
+            
             
             kCenterTabBarView = lottieView
+            
+            
+            let button = AddMyCenterTab()
+            button.backgroundColor = .red
+            button.action { (sender) in
+                debugPrint("========")
+            }
+            
+//            self.itemWidth = 100
+            
         }
         else {
             let x = ceil(CGFloat(index) * singleW + (singleW - LOTAnimationViewWidth) / 2.0)
@@ -176,6 +196,29 @@ extension UITabBar {
 
 
 extension LOTAnimationView {
+    
+    
+//    public required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+    open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        let x = point.x - (kCenterTabBarView?.frame.origin.x ?? 0)
+        let y = point.y - (kCenterTabBarView?.frame.origin.y ?? 0)
+        
+        let p = CGPoint.init(x: x, y: y)
+        
+        let w = ((kCenterTabBarView?.bounds.size.width ?? 0)/2.0) - p.x
+        
+        return sqrt(pow(w, 2) + pow((kCenterTabBarView?.bounds.size.height ?? 0) / 2.0 - p.y, 2)) < (kCenterTabBarView?.bounds.size.width ?? 0) / 2.0
+    }
+    
+//    override func updateLayout() {
+//        super.updateLayout()
+//        kCenterTabBarView?.sizeToFit()
+//        kCenterTabBarView?.center = CGPoint.init(x: self.bounds.size.width / 2.0, y: self.bounds.size.height / 2.0)
+//    }
+    
     open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         
         if self.isHidden {
@@ -208,3 +251,56 @@ extension LOTAnimationView {
 //                return [super hitTest:point withEvent:event];
 //            }
 //        }
+
+
+
+extension UITabBar
+{
+
+    //关联对象的ID,注意，在私有嵌套 struct 中使用 static var，这样会生成我们所需的关联对象键，但不会污染整个命名空间。
+
+    private struct AssociatedKeys {
+        static var TabKey = "tabView"
+    }
+
+    //定义一个新的tabbar属性,并设置set,get方法
+    var btnTab:UIButton?{
+
+        get{
+            //通过Key获取已存在的对象
+            return objc_getAssociatedObject(self, &AssociatedKeys.TabKey) as? UIButton
+
+        }
+
+        set{
+            //对象不存在则创建
+            objc_setAssociatedObject(self, &AssociatedKeys.TabKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    /**
+     添加中心按钮
+     */
+    func AddMyCenterTab()->UIButton
+    {
+        if self.btnTab == nil
+        {
+
+            self.shadowImage = UIImage()//(49 - 42) / 2
+            let btn = UIButton(frame: CGRect.init(x: (SCREEN_WIDTH - 50) / 2, y: -14, width: 50, height: 50))
+
+            btn.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+            btn.setImage(UIImage.init(named: "homework_progress_point"), for: UIControl.State.normal)
+            self.addSubview(btn)
+            self.btnTab = btn
+
+
+
+        }
+
+
+        return self.btnTab!
+    }
+
+
+}

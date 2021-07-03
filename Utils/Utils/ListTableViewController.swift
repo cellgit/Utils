@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import ESTabBarController_swift
 
 class ListTableViewController: UITableViewController {
-        
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,12 @@ class ListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.tableView.register(UITableViewCell.self)
+        self.tableView.backgroundColor = .red
+        
+        
+//        self.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: "Home", image: UIImage(named: "icon_mine@3X_00001"), selectedImage: UIImage(named: "icon_mine@3X_00005"))
+        
+        
         
         
     }
@@ -39,6 +48,7 @@ class ListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         cell.textLabel?.text = "\(ExampleEnum.allCases[indexPath.row].self)"
+        cell.backgroundColor = .systemTeal
         return cell
     }
     
@@ -48,10 +58,10 @@ class ListTableViewController: UITableViewController {
         
         switch indexPath.row {
         case ExampleEnum.alert.rawValue:
-            let alertViewController = AlertListTableViewController.init(style: .plain)
+            let alertViewController = AlertListTableViewController.init(style: .grouped)
             self.navigationController?.pushViewController(alertViewController, animated: true)
         case ExampleEnum.sheet.rawValue:
-            let alertViewController = SheetListTableViewController.init(style: .plain)
+            let alertViewController = SheetListTableViewController.init(style: .grouped)
             self.navigationController?.pushViewController(alertViewController, animated: true)
         case ExampleEnum.linedLabel.rawValue:
             let alertViewController = ViewController.init()
@@ -98,6 +108,8 @@ class ListTableViewController: UITableViewController {
             let vc = SWFlowLayoutViewController.init()
 
             self.navigationController?.pushViewController(vc, animated: true)
+            
+            
         default:
             break
         }

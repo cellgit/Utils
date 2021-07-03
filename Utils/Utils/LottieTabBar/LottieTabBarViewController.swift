@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+import ESTabBarController_swift
+
 public protocol LottieTabBarDelegate: class {
 
     func lottieTabBar(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController)
@@ -67,6 +69,13 @@ open class LottieTabBarViewController: UITabBarController {
             self.tabBar.addRedPointView(index: index)
             if let titles = titles, index < titles.count {
                 self.tabBar.items?[index].title = titles[index]
+                
+                let totalW = UIScreen.main.bounds.size.width
+                let singleW = totalW / CGFloat(self.tabBar.items?.count ?? 1)
+                let y:CGFloat = 5.0
+                let x2 = ceil(CGFloat(index) * singleW + (singleW - LOTAnimationViewWidth2) / 2.0)
+                let frame = CGRect(x: x2, y: y-30, width: LOTAnimationViewWidth2, height: LOTAnimationViewHeight2)
+                
             } else {
                 self.tabBar.items?[index].title = ""
                 self.tabBar.items?[index].titlePositionAdjustment = UIOffset(horizontal: 15.0, vertical: 0.0)

@@ -19,3 +19,13 @@ let kOrientation: UIInterfaceOrientation = UIApplication.shared.statusBarOrienta
 
 let kAppDelegate = UIApplication.shared.delegate
 
+/////是否全面屏手机
+//var is_iPhoneX : Bool {
+//    guard #available(iOS 11.0, *) else {
+//        return false
+//    }
+//    if isPad == true {
+//        return false
+//    }
+//    return UIApplication.shared.windows[0].safeAreaInsets.bottom > 0
+//}

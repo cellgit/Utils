@@ -37,7 +37,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.backgroundColor = .white
-        let nav = UINavigationController.init(rootViewController: TabBarViewController()) //TabBarViewController
+//        let nav = UINavigationController.init(rootViewController: TabBarViewController()) //TabBarViewController
+        
+//        let nav = ESTabBarProvider.customIrregularityStyle(delegate: nil)
+        
+        let nav = ESTabBarProvider.lottieSytle()
+        
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
